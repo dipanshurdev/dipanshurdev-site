@@ -1,14 +1,15 @@
----
-import {useEffect}  from "astro/client"
+import { useEffect } from "react";
 import * as THREE from "three"
 
-// Create a React component using useEffect hook for Three.js setup
+const ThreejsBg = () => {
+
 useEffect(() => {
-  // Set up scene, camera, and renderer
+
+
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
   camera.position.z = 5;
- const renderer = new THREE.WebGLRenderer({ alpha: true });
+  const renderer = new THREE.WebGLRenderer({ alpha: true });
   renderer.setSize(window.innerWidth, window.innerHeight);
   document.body.appendChild(renderer.domElement);
 
@@ -53,13 +54,21 @@ useEffect(() => {
 
   // Cleanup on unmount
   return () => {
-    window.removeEventListener('resize', handleResize);
+//     window.removeEventListener('resize', handleResize);
     renderer.dispose();
     document.body.removeChild(renderer.domElement);
   };
-});
+
+//   }
+ 
+}, [])
 
 
----
+return (
 
 <div></div>
+
+)
+}
+
+export default ThreejsBg;
