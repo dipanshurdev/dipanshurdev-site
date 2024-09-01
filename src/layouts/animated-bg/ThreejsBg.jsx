@@ -32,7 +32,7 @@ const ThreejsBg = () => {
 
     // Create a circle texture for rounded particles
     const createCircleTexture = () => {
-      const size = 128;
+      const size = 100;
       const canvas = document.createElement("canvas");
       canvas.width = size;
       canvas.height = size;
