@@ -30,11 +30,34 @@ const ThreejsBg = () => {
 
     particles.setAttribute("position", new THREE.BufferAttribute(positions, 3));
 
-    // Create material for particles
+    // Create a circle texture for rounded particles
+    const createCircleTexture = () => {
+      const size = 128;
+      const canvas = document.createElement("canvas");
+      canvas.width = size;
+      canvas.height = size;
+
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return null;
+
+      // Draw a circle
+      ctx.fillStyle = "white";
+      ctx.beginPath();
+      ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
+      ctx.fill();
+
+      const texture = new THREE.CanvasTexture(canvas);
+      return texture;
+    };
+
+    // Create material for particles using the circle texture
     const particleMaterial = new THREE.PointsMaterial({
-      color: 0xffffff,
-      size: 0.5,
+      map: createCircleTexture(),
+      size: 0.2,
       sizeAttenuation: true,
+      transparent: true,
+      alphaTest: 0.5,
+      color: 0xffffff,
     });
 
     const particleSystem = new THREE.Points(particles, particleMaterial);
