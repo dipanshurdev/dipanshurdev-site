@@ -1,8 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
 const ThreejsBg = () => {
+  const mountRef = useRef(null);
+
   useEffect(() => {
+    // Scene setup
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       75,
@@ -10,69 +13,65 @@ const ThreejsBg = () => {
       0.1,
       1000
     );
-    camera.position.z = 5;
-    const renderer = new THREE.WebGLRenderer({ alpha: true });
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
+    mountRef.current.appendChild(renderer.domElement);
 
-    // Function to create stars
-    function createStars() {
-      const starGeometry = new THREE.BufferGeometry();
-      const starMaterial = new THREE.PointsMaterial({
-        color: 0xff4f7f,
-        size: 0.8,
-        borderRadius: 200,
-        zIndex: 2,
-      });
+    // Create particles
+    const particleCount = 1000;
+    const particles = new THREE.BufferGeometry();
+    const positions = new Float32Array(particleCount * 3);
 
-      const starVertices = [];
-      for (let i = 0; i < 1000; i++) {
-        const x = THREE.MathUtils.randFloatSpread(200);
-        const y = THREE.MathUtils.randFloatSpread(200);
-        const z = THREE.MathUtils.randFloatSpread(200);
-        starVertices.push(x, y, z);
-      }
-
-      starGeometry.setAttribute(
-        "position",
-        new THREE.Float32BufferAttribute(starVertices, 3)
-      );
-      const stars = new THREE.Points(starGeometry, starMaterial);
-      scene.add(stars);
+    for (let i = 0; i < particleCount; i++) {
+      positions[i * 3] = (Math.random() - 0.5) * 200;
+      positions[i * 3 + 1] = (Math.random() - 0.5) * 200;
+      positions[i * 3 + 2] = (Math.random() - 0.5) * 200;
     }
 
-    createStars();
+    particles.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+
+    // Create material for particles
+    const particleMaterial = new THREE.PointsMaterial({
+      color: 0xffffff,
+      size: 0.5,
+      sizeAttenuation: true,
+    });
+
+    const particleSystem = new THREE.Points(particles, particleMaterial);
+    scene.add(particleSystem);
+
+    camera.position.z = 50;
 
     // Animation loop
     const animate = () => {
       requestAnimationFrame(animate);
-      scene.rotation.x += 0.0005;
-      scene.rotation.y += 0.0005;
+      particleSystem.rotation.y += 0.001; // Rotate particles around Y-axis
       renderer.render(scene, camera);
     };
 
     animate();
 
-    // Handle window resize
+    // Resize handler
     const handleResize = () => {
-      renderer.setSize(window.innerWidth, window.innerHeight);
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
     };
 
     window.addEventListener("resize", handleResize);
 
-    // Cleanup on unmount
     return () => {
+      mountRef.current.removeChild(renderer.domElement);
       window.removeEventListener("resize", handleResize);
-      renderer.dispose();
-      document.body.removeChild(renderer.domElement);
     };
-
-    //   }
   }, []);
 
-  return null;
+  return (
+    <div
+      ref={mountRef}
+      style={{ position: "absolute", top: 0, left: 0, zIndex: -1 }}
+    />
+  );
 };
 
 export default ThreejsBg;
