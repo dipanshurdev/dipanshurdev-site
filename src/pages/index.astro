@@ -1,12 +1,23 @@
 ---
 import ThreejsBg from "../layouts/animated-bg/ThreejsBg";
 import Navbar from "../components/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+
+// import "@fontsource-variable/open-sans";
+// import "@fontsource-variable/dosis";
 ---
 
-<main>
-  <ThreejsBg client:load />
-  <Navbar />
-</main>
+<Layout title="amanr-dev">
+  <main class="text-gray-200">
+    <ThreejsBg client:load />
+    <Navbar />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa voluptas
+      eaque voluptatum, laudantium a explicabo illo nemo nisi totam dolores
+      atque, dolore mollitia soluta.
+    </p>
+  </main>
+</Layout>
 
 <style>
   main {
@@ -14,7 +25,8 @@ import Navbar from "../components/Navbar.astro";
     padding: 1rem;
     width: 100%;
     max-width: 80rem;
-    color: white;
+    /* font-family: "Dosis Variable"; */
+    /* font-family: "Open Sans"; */
     font-size: 20px;
     line-height: 1.6;
     background-color: inherit;

@@ -18,7 +18,7 @@ const ThreejsBg = () => {
     mountRef.current.appendChild(renderer.domElement);
 
     // Create particles
-    const particleCount = 1000;
+    const particleCount = 888;
     const particles = new THREE.BufferGeometry();
     const positions = new Float32Array(particleCount * 3);
 
@@ -68,7 +68,7 @@ const ThreejsBg = () => {
     // Animation loop
     const animate = () => {
       requestAnimationFrame(animate);
-      particleSystem.rotation.y += 0.001; // Rotate particles around Y-axis
+      particleSystem.rotation.y += 0.0008; // Rotate particles around Y-axis
       renderer.render(scene, camera);
     };
 
