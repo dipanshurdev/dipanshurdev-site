@@ -1,6 +1,6 @@
 ---
 import ThreejsBg from "../layouts/animated-bg/ThreejsBg";
-import Navbar from "../components/Navbar.astro";
+import { Navbar, SuperHero } from "../components";
 import Layout from "../layouts/Layout.astro";
 
 // import "@fontsource-variable/open-sans";
@@ -8,26 +8,27 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="amanr-dev">
-  <main class="text-gray-200">
-    <ThreejsBg client:load />
+  <main>
+    <ThreejsBg client:only />
     <Navbar />
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa voluptas
-      eaque voluptatum, laudantium a explicabo illo nemo nisi totam dolores
-      atque, dolore mollitia soluta.
-    </p>
+    <SuperHero />
   </main>
 </Layout>
 
 <style>
   main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     margin: auto;
     padding: 1rem;
     width: 100%;
     max-width: 80rem;
+    color: #e5e7eb;
     /* font-family: "Dosis Variable"; */
     /* font-family: "Open Sans"; */
-    font-size: 20px;
+    font-size: 1.5rem;
     line-height: 1.6;
     background-color: inherit;
     /* background-color: #13151a; */
