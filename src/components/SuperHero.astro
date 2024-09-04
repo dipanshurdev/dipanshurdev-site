@@ -3,20 +3,21 @@ import "@fontsource-variable/quicksand";
 ---
 
 <main
-  class="flex items-start justify-start p-8 w-[60rem] max-w-5xl flex-col my-4 gap-8"
+  class="flex items-start justify-start p-8 w-[60rem] max-w-5xl flex-col my-4 gap-8 bg-inherit"
 >
   <div class="w-full flex items-start justify-start py-4">
-    <h1 class="text-5xl text-blue-500 font-bold">amanr-dev</h1>
+    <h1 class="text-5xl text-blue-700 font-bold">amanr-dev</h1>
   </div>
   <div class="w-full flex-1">
     <p class="text-3xl">
       Hey visitor 👋 I’m Aman Rawat, a Fullstack Developer, mostly doing
-      Frontend with <span> <a href="#" class="underline"> React.js</a> </span>,
-      <span> <a href="#" class="underline">Next.js</a> </span>, and more. I like
-      building cool projects and contributing to open-source. When I'm not
-      coding, you’ll find me exploring the latest tech trends on <span>
-        <a href="#" class="underline">Twitter 🐦</a>
-      </span> and <span> <a href="#" class="underline">LinkedIn </a> </span> .
+      Frontend with
+      <span> <a href="#" class="underline-animation">React.js</a> </span>,
+      <span> <a href="#" class="underline-animation">Next.js</a> </span>, and
+      more. I like building cool projects and contributing to open-source. When
+      I'm not coding, you’ll find me exploring the latest tech trends on
+      <span><a href="#" class="underline-animation">Twitter 🐦</a></span>
+      and <span> <a href="#" class="underline-animation">LinkedIn</a> </span>.
     </p>
   </div>
 </main>
@@ -25,27 +26,28 @@ import "@fontsource-variable/quicksand";
   main {
     font-family: "Quicksand Variable";
   }
-  .underline {
-    display: inline-block;
+  .underline-animation {
     position: relative;
     text-decoration: none;
-    transition: all ease-in-out 0.5s;
+    color: inherit;
+    z-index: 10;
   }
-  .underline:before {
+
+  .underline-animation::before {
     content: "";
     position: absolute;
-    z-index: -1;
-    left: 0;
-    right: 100%;
+    width: 0;
+    height: 100%;
     bottom: 0;
-    background: blue;
-    height: 5px;
-    transition-property: right;
-    transition-duration: 250ms;
+    left: 0;
+    background-color: #3b82f6;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
   }
-  .underline:hover:before,
-  .underline:focus:before,
-  .underline:active:before {
-    right: 0;
+
+  .underline-animation:hover::before {
+    visibility: visible;
+    width: 100%;
   }
 </style>
