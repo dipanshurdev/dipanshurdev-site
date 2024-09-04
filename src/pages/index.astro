@@ -1,16 +1,17 @@
 ---
 import ThreejsBg from "../layouts/animated-bg/ThreejsBg";
-import { Navbar, SuperHero } from "../components";
+import { Navbar, SuperHero, Footer } from "../components";
 import Layout from "../layouts/Layout.astro";
 
 // import "@fontsource-variable/dosis";
 ---
 
 <Layout title="amanr-dev">
-  <main>
+  <main class="h-full overflow-hidden">
     <ThreejsBg client:only />
     <Navbar />
     <SuperHero />
+    <Footer />
   </main>
 </Layout>
 
