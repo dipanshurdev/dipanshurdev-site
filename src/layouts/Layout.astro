@@ -31,5 +31,24 @@ const { title } = Astro.props;
   body {
     background: inherit;
     font-family: "Dosis Variable";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* background-color: #13151a; */
+    background-color: #000;
+    scrollbar-width: thin;
+  }
+
+  /* Scrollbar Style*/
+  ::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-clip: content-box;
+    background-color: #e5e7eb;
+    border: 5px solid transparent;
+    border-radius: 20px;
+    transition: background-color 500ms ease-in-out;
   }
 </style>
