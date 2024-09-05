@@ -17,7 +17,7 @@ const ThreejsBg = () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
 
     // Canvar color
-    renderer.setClearColor(new THREE.Color(0x0f172a));
+    renderer.setClearColor(new THREE.Color(0x171717));
     mountRef.current.appendChild(renderer.domElement);
 
     // Create particles
@@ -56,7 +56,7 @@ const ThreejsBg = () => {
     // Create material for particles using the circle texture
     const particleMaterial = new THREE.PointsMaterial({
       map: createCircleTexture(),
-      size: 0.5,
+      size: 0.8,
       sizeAttenuation: false,
       transparent: true,
       alphaTest: 0.5,
@@ -66,7 +66,7 @@ const ThreejsBg = () => {
     const particleSystem = new THREE.Points(particles, particleMaterial);
     scene.add(particleSystem);
 
-    camera.position.z = 80;
+    camera.position.z = 50;
 
     // Animation loop
     const animate = () => {
