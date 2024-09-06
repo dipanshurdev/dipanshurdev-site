@@ -2,7 +2,17 @@
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        flicker: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.1" },
+        },
+      },
+      animation: {
+        flicker: "flicker 0.2s infinite alternate",
+      },
+    },
   },
   plugins: [],
 };
