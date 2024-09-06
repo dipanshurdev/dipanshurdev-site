@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
-const ThreejsBg = () => {
-  const mountRef = useRef(null);
+const ThreejsBg: React.FC = () => {
+  const mountRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     // Scene setup
@@ -18,12 +18,12 @@ const ThreejsBg = () => {
 
     // Canvar color
     renderer.setClearColor(new THREE.Color(0x171717));
-    mountRef.current.appendChild(renderer.domElement);
+    mountRef.current?.appendChild(renderer.domElement);
 
     // Create particles
     const particleCount = 444;
     const particles = new THREE.BufferGeometry();
-    const positions = new Float32Array(particleCount * 2);
+    const positions = new Float32Array(particleCount * 3); // should be multiplied by 3 instead of 2 for XYZ positions
 
     for (let i = 0; i < particleCount; i++) {
       positions[i * 3] = (Math.random() - 0.5) * 200;
@@ -34,7 +34,8 @@ const ThreejsBg = () => {
     particles.setAttribute("position", new THREE.BufferAttribute(positions, 3));
 
     // Create a circle texture for rounded particles
-    const createCircleTexture = () => {
+    // @ts-ignore
+    const createCircleTexture = (): THREE.CanvasTexture | null => {
       const size = 100;
       const canvas = document.createElement("canvas");
       canvas.width = size;
@@ -87,7 +88,9 @@ const ThreejsBg = () => {
     window.addEventListener("resize", handleResize);
 
     return () => {
-      mountRef.current.removeChild(renderer.domElement);
+      if (mountRef.current) {
+        mountRef.current.removeChild(renderer.domElement);
+      }
       window.removeEventListener("resize", handleResize);
     };
   }, []);
