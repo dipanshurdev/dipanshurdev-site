@@ -8,37 +8,3 @@ import HeroDesc from "./HeroDesc";
 >
   <HeroDesc client:only />
 </main>
-
-<style>
-  main {
-    font-family: "Quicksand Variable";
-  }
-  .underline-animation {
-    position: relative;
-    color: inherit;
-    z-index: 10;
-    text-decoration: underline;
-    text-decoration-color: #1d4ed8;
-  }
-
-  .underline-animation::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 100%;
-    bottom: 0;
-    left: 0;
-    background-color: #1d4ed8;
-    visibility: hidden;
-    transition: all 0.4s ease-in-out;
-    z-index: -1;
-  }
-
-  .underline-animation:hover,
-  .underline-animation:hover::before {
-    visibility: visible;
-    width: 100%;
-    text-decoration: none;
-    transition: all 0.8s ease-out;
-  }
-</style>

@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import MyName from "./MyName";
+import "./hero.css";
 
 type Props = {};
 
 const HeroDesc = (props: Props) => {
-  const [widthPx, setwidthPx] = useState<number>();
+  const [widthPx, setwidthPx] = useState<number>(343);
 
   useEffect(() => {
     const nameElm = document.querySelector(".my-name");
@@ -15,11 +16,12 @@ const HeroDesc = (props: Props) => {
 
   return (
     <div className="w-full">
-      <span> Hey there 👋 I’m </span>
+      <span> Hey visitor 👋, It's </span>
       <MyName name="amanr-dev" />
       <p className="text-3xl leading-snug">
-        <span className={`mr-[${widthPx}px]`}></span> a Fullstack Developer,
-        mostly doing Frontend with
+        <span style={{ marginRight: `${widthPx}px` }}></span> a Fullstack Dev
+        here! My Name is Aman Rawat and i am a fullstack developer. I mostly
+        like doing Frontend with
         <span>
           {" "}
           <a href="#" className="underline-animation">
@@ -33,22 +35,23 @@ const HeroDesc = (props: Props) => {
             Next.js
           </a>{" "}
         </span>
-        , and more. I like building cool projects and contributing to open
-        source softwares. When I'm not coding, you’ll find me exploring the
-        latest tech trends on
+        , and more. I build cool projects and contribute to open source
+        softwares. When I'm not coding, you’ll find me exploring the latest tech
+        trends on
         <span>
           {" "}
           <a href="#" className="underline-animation">
             Twitter
           </a>
         </span>
-        and{" "}
+        or{" "}
         <span>
           {" "}
           <a href="#" className="underline-animation">
-            LinkedIn.
+            LinkedIn
           </a>{" "}
         </span>
+        with <span>Tea☕</span>
       </p>
     </div>
   );
