@@ -19,7 +19,7 @@ const animatedName = (): any => {
 
       if (!excludedIndexes.includes(randIndex) && !excludedChars.includes(c)) {
         chars[randIndex] =
-          `<span class="animate-flicker text-blue-700 drop-shadow-text-sm ">${c}</span>`;
+          `<span class="animate-flicker text-blue-700  ">${c}</span>`;
         excludedIndexes.push(randIndex);
         i++;
       }

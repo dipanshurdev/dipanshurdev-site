@@ -1,24 +1,40 @@
 <footer class="w-full my-2 p-4 flex flex-row items-center justify-start">
   <div class="flex gap-8 cursor-pointer justify-center items-center">
-    <span>
-      <a href="https://twitter.com" target="_blank">
+    <span class="footer-link">
+      <a href="https://twitter.com/amanrdev" target="_blank">
         <img class="w-7 h-7" src="/icons/twitter-x.svg" alt="X" />
       </a>
     </span>
-    <span>
-      <a href="https://linkedin.com" target="_blank">
+    <span class="footer-link">
+      <a href="https://www.linkedin.com/in/amanrawat09" target="_blank">
         <img class="w-7 h-7" src="/icons/linkedin.svg" alt="LinkedIn" />
       </a>
     </span>
-    <span>
+    <span class="footer-link">
       <a href="https://github.com/amanr-dev" target="_blank">
         <img class="w-7 h-7" src="/icons/github.svg" alt="Github" />
       </a>
     </span>
-    <span>
+    <span class="footer-link">
       <a href="mailto:dv451197@gmail.com" target="_blank">
         <img class="w-7 h-7" src="/icons/gmail.svg" alt="Gmail" />
       </a>
     </span>
   </div>
 </footer>
+
+<style>
+  .footer-link {
+    display: flex;
+    /* border: none; */
+    transition: all 0.2s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+  }
+  .footer-link:hover {
+    border: 4px solid #1d4ed8;
+  }
+</style>

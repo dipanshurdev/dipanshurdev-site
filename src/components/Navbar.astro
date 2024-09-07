@@ -1,23 +1,66 @@
 <nav
   class="w-full text-2xl my-2 p-4 flex flex-row items-center justify-between"
 >
-  <div class="flex-1 gap-4 flex items-center">
+  <div class="gap-4 flex items-center">
     <!-- <span class="text-blue-700 font-bold">
       <a href="/"> A </a>
     </span> -->
-    <span>
-      <a href="/about"> About </a>
+    <span class="underline">
+      <a href="/about"> about </a>
     </span>
-    <span>
-      <a href="/projects"> Projects </a>
+    <span class="underline">
+      <a href="/projects"> projects </a>
     </span>
-    <span>
-      <a href="/contact"> Contact </a>
+    <span class="underline">
+      <a href="/contact"> contact </a>
     </span>
   </div>
   <div class="flex items-center gap-4 cursor-pointer justify-center">
-    <span>
+    <span class="nav-icon">
       <img class="w-5 h-5" src="/icons/sun.svg" alt="Light Mode" />
     </span>
   </div>
 </nav>
+
+<style>
+  .underline {
+    text-decoration: none;
+    position: relative;
+    z-index: 10;
+  }
+
+  .underline::before {
+    content: "";
+    background-color: #1d4ed8;
+    width: 0;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    top: 33px;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+  }
+  .underline:hover,
+  .underline:hover::before {
+    width: 100%;
+    visibility: visible;
+    transition: all 0.4s ease-in;
+    text-decoration: none;
+  }
+
+  .nav-icon {
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+  }
+  .nav-icon:hover {
+    border: 4px solid #1d4ed8;
+  }
+</style>
