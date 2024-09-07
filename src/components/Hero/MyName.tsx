@@ -12,7 +12,7 @@ const MyName = (props: Props) => {
   }, []);
 
   return (
-    <div className="text-[#e5e7eb] w-full">
+    <div className="text-[#e5e7eb] w-full my-2">
       <h1
         style={{ fontFamily: "Dosis Variable" }}
         className="text-7xl my-name font-bold inline drop-shadow-text-lg"

@@ -16,12 +16,11 @@ const HeroDesc = (props: Props) => {
 
   return (
     <div className="w-full">
-      <span> Hey visitor 👋, It's </span>
-      <MyName name="amanr-dev" />
+      <span> Hey visitor 👋, I'm </span>
+      <MyName name="Aman Rawat" />
       <p className="text-3xl leading-snug">
-        <span style={{ marginRight: `${widthPx}px` }}></span> a Fullstack Dev
-        here! My Name is Aman Rawat and i am a fullstack developer. I mostly
-        like doing Frontend with
+        <span style={{ marginRight: `${widthPx}px` }}></span> a Fullstack
+        Developer. I mostly like doing Frontend with
         <span>
           {" "}
           <a href="#" className="underline-animation">
@@ -43,8 +42,8 @@ const HeroDesc = (props: Props) => {
           <a href="#" className="underline-animation">
             Twitter
           </a>
-        </span>
-        or{" "}
+        </span>{" "}
+        and
         <span>
           {" "}
           <a href="#" className="underline-animation">
