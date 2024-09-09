@@ -17,7 +17,7 @@ const HeroDesc = (props: Props) => {
   return (
     <div className="w-full">
       <span> Hey visitor 👋, I'm </span>
-      <MyName name="Aman Rawat" />
+      <MyName name="Dipanshu Rawat" />
       <p className="text-3xl leading-snug">
         <span style={{ marginRight: `${widthPx}px` }}></span> a Fullstack
         Developer. I mostly like doing Frontend with
