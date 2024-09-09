@@ -1,45 +1,15 @@
 ---
 import ThreejsBg from "../layouts/animated-bg/ThreejsBg";
-import { Navbar, Footer } from "../components";
 import Layout from "../layouts/Layout.astro";
 import SuperHero from "../components/Hero/SuperHero.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 
 // import "@fontsource-variable/dosis";
 ---
 
 <Layout title="amanr-dev">
-  <main class="h-full overflow-hidden">
+  <MainLayout>
     <ThreejsBg client:only="react" />
-    <Navbar />
     <SuperHero />
-    <Footer />
-  </main>
+  </MainLayout>
 </Layout>
-
-<style>
-  main {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    margin: auto;
-    padding: 1rem;
-    width: 100%;
-    height: 100%;
-    max-width: 70rem;
-    /* font-family: "Dosis Variable"; */
-    /* font-family: "Open Sans"; */
-    font-size: 1.5rem;
-    line-height: 1.6;
-    background-color: transparent;
-  }
-
-  .animation-bg {
-    width: 100%;
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    right: 0%;
-    bottom: 0%;
-  }
-</style>
