@@ -1,15 +1,13 @@
 ---
 import ThreejsBg from "../layouts/animated-bg/ThreejsBg";
-import Layout from "../layouts/Layout.astro";
 import SuperHero from "../components/Hero/SuperHero.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 
 // import "@fontsource-variable/dosis";
 ---
 
-<Layout title="dipanshurdev">
-  <MainLayout>
-    <ThreejsBg client:only="react" />
-    <SuperHero />
-  </MainLayout>
-</Layout>
+<MainLayout title="dipanshurdev">
+  <ThreejsBg client:only="react" />
+  <SuperHero />
+  <!-- <Projects /> -->
+</MainLayout>
