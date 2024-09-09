@@ -1,12 +1,21 @@
 ---
 import { Footer, Navbar } from "../components";
+import Layout from "./Layout.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
 ---
 
-<main class="h-full overflow-hidden">
-  <Navbar />
-  <slot />
-  <Footer />
-</main>
+<Layout title={title}>
+  <main class="h-full overflow-hidden min-h-screen">
+    <Navbar />
+    <slot />
+    <Footer />
+  </main>
+</Layout>
 
 <style>
   main {
