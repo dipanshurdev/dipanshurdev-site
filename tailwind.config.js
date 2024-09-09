@@ -110,19 +110,19 @@ export default {
       keyframes: {
         flicker: {
           "0%": {
-            opacity: "1",
-            textShadow: "0 0 4px #1d4ed8",
+            opacity: "0.2",
+            textShadow: "0 0 2px #1d4ed8",
           },
           "11%": {
             opacity: "1",
             textShadow: "0 0 2px #1d4ed8",
           },
           "19%": {
-            opacity: "1",
+            opacity: "0.2",
             textShadow: "0 0 2px #1d4ed8",
           },
           "22%": {
-            opacity: "0.2",
+            opacity: "1",
             textShadow: "0 0 4px #1d4ed8",
           },
           "29%": {
@@ -138,7 +138,7 @@ export default {
             textShadow: "0 0 2px #1d4ed8",
           },
           "44%": {
-            opacity: "0.2",
+            opacity: "1",
             textShadow: "0 0 4px #1d4ed8",
           },
           "50%": {
@@ -150,11 +150,11 @@ export default {
             textShadow: "0 0 4px #1d4ed8",
           },
           "60%": {
-            opacity: "0.2",
-            textShadow: "0 0 4px #1d4ed8",
+            opacity: "0.8",
+            textShadow: "0 0 2px #1d4ed8",
           },
           "80%": {
-            opacity: "0.2",
+            opacity: "1",
             textShadow: "0 0 4px #1d4ed8",
           },
           "100%": {
@@ -162,7 +162,7 @@ export default {
             textShadow: "0 0 4px #1d4ed8",
           },
           "22%": {
-            opacity: "0.2",
+            opacity: "1",
             textShadow: "0 0 4px #1d4ed8",
           },
           "80%": {
