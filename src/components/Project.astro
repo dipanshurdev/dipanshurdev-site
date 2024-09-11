@@ -1,0 +1,29 @@
+---
+interface Props {
+  name: string;
+  url: string;
+  image: string;
+  desc: string;
+  tech: Array<string>;
+}
+
+const { name, url, image, desc, tech } = Astro.props;
+---
+
+<div class="flex flex-col items-start justify-center">
+  <div class="h-[250px] w-[350px]">
+    <img
+      class="w-full min-h-[222px] object-contain"
+      src={image}
+      alt="Project Image"
+    />
+  </div>
+  <div class="w-full">
+    <span><a href={url} target="_blank"> {name}</a></span>
+  </div>
+  <div>
+    <p>
+      {desc.length > 100 ? desc.slice(0, 100) : desc}....
+    </p>
+  </div>
+</div>
