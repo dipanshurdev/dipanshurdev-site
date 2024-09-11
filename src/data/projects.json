@@ -1,0 +1,16 @@
+[{
+    "name": "SocialGram-me",
+    "url": "https://socialgram-me.vercel.app",
+    "image": "",
+    "desc": "A Social Image sharing platfrom powered by reactjs and Backend by appwrite",
+    "tech": ["react", "appwrite", "npm"]
+  
+},
+{
+     "name": "Pictures-me",
+    "url": "A Social Image sharing platfrom powered by reactjs and Backend by appwrite",
+    "image": "",
+    "desc": "",
+    "tech": ["react", "js", "npm"]
+}
+]
