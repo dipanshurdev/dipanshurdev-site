@@ -1,0 +1,59 @@
+.hover-container {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-link {
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  /* color: #000; */
+  font-weight: bold;
+}
+
+.hover-image {
+  position: absolute;
+  top: -150px; /* Adjust this to position above the link */
+  left: 0;
+  width: 200px; /* Adjust image size */
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    transform 3.3s ease-in;
+  transform: translateY(10px); /* Initial slide-down effect */
+}
+
+.hover-container:hover .hover-image {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); /* Moves image to the original position */
+}
+.underline-animation {
+  position: relative;
+  color: inherit;
+  z-index: 10;
+  text-decoration: underline;
+  text-decoration-color: #1d4ed8;
+}
+
+.underline-animation::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #1d4ed8;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
+}
+
+.underline-animation:hover,
+.underline-animation:hover::before {
+  visibility: visible;
+  width: 100%;
+  text-decoration: none;
+  transition: all 0.8s ease-out;
+}

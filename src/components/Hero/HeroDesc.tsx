@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import MyName from "./MyName";
 import "./hero.css";
+import LinkPopup from "../link_popup/LinkPopup";
 
 type Props = {};
 
 const HeroDesc = (props: Props) => {
-  const [widthPx, setwidthPx] = useState<number>(343);
+  const [widthPx, setwidthPx] = useState<number>(0);
 
   useEffect(() => {
     const nameElm = document.querySelector(".my-name");
@@ -23,9 +24,9 @@ const HeroDesc = (props: Props) => {
         Developer. I mostly like doing Frontend with
         <span>
           {" "}
-          <a href="#" className="underline-animation">
-            React.js
-          </a>{" "}
+          <LinkPopup url={""} image="socialgram.png">
+            React
+          </LinkPopup>
         </span>
         ,
         <span>
