@@ -1,4 +1,6 @@
 ---
+import LinkPopup from "./LinkPopup.astro";
+
 interface Props {
   name: string;
   url: string;
@@ -19,7 +21,7 @@ const { name, url, image, desc, tech } = Astro.props;
     />
   </div>
   <div class="w-full">
-    <span><a href={url} target="_blank"> {name}</a></span>
+    <LinkPopup linkText={name} url={url} image={image} />
   </div>
   <div>
     <p>
