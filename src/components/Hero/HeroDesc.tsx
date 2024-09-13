@@ -31,25 +31,25 @@ const HeroDesc = (props: Props) => {
         ,
         <span>
           {" "}
-          <a href="#" className="underline-animation">
+          <LinkPopup url={""} image="sumzer.png">
             Next.js
-          </a>{" "}
+          </LinkPopup>
         </span>
         , and more. I build cool projects and contribute to open source
         softwares. When I'm not coding, you’ll find me exploring the latest tech
         trends on
         <span>
           {" "}
-          <a href="#" className="underline-animation">
+          <LinkPopup url={""} image="sumzer.png">
             Twitter
-          </a>
+          </LinkPopup>
         </span>{" "}
         and
         <span>
           {" "}
-          <a href="#" className="underline-animation">
+          <LinkPopup url={""} image="sumzer.png">
             LinkedIn
-          </a>{" "}
+          </LinkPopup>
         </span>
         with <span>Tea☕</span>
       </p>
