@@ -25,7 +25,7 @@ const HeroDesc = (props: Props) => {
         <span>
           {" "}
           <LinkPopup url={""} image="socialgram.png">
-            React
+            React.js
           </LinkPopup>
         </span>
         ,
@@ -50,8 +50,8 @@ const HeroDesc = (props: Props) => {
           <LinkPopup url={""} image="sumzer.png">
             LinkedIn
           </LinkPopup>
-        </span>
-        with <span>Tea☕</span>
+        </span>{" "}
+        with <span> Tea☕</span>
       </p>
     </div>
   );
