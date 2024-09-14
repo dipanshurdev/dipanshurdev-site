@@ -1,12 +1,20 @@
 import { create } from "zustand";
-const nameElm = document.querySelector(".my-name");
-const charW = nameElm?.getBoundingClientRect().width;
-const charPx = Math.floor(charW as number);
 
-const useStore = create((set) => ({
-  darkMode: true,
-  charwidth: charPx,
-  setDarkMode: (darkMode: boolean) => set({ darkMode }),
+// set of theme enum type
+enum ThemeType {
+  light = "light",
+  dark = "dark",
+}
+
+// interface for theme with keyof of enum ThemeType
+interface ThemeState {
+  theme: keyof typeof ThemeType;
+  setTheme: (theme: keyof typeof ThemeType) => void;
+}
+
+const useStore = create<ThemeState>()((set) => ({
+  theme: "dark",
+  setTheme: (theme) => set({ theme }),
 }));
 
-export default useStore;
+export { useStore as default };
