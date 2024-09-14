@@ -1,6 +1,6 @@
 import useStore from "../libs/state";
 import { useEffect } from "react";
-0;
+
 const DarkModeToggle: React.FC = () => {
   const theme = useStore((mode) => mode.theme);
   const setTheme = useStore((mode) => mode.setTheme);
