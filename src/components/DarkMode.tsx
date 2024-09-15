@@ -5,20 +5,28 @@ const DarkModeToggle: React.FC = () => {
   const theme = useStore((mode) => mode.theme);
   const setTheme = useStore((mode) => mode.setTheme);
 
+  // NOTE: ADD BETTER DARKMODE FEATURE!!!!!!!
+
   useEffect(() => {
     const localTheme = window.localStorage.getItem("theme") as "light" | "dark";
     if (localTheme) {
       setTheme(localTheme);
+      document.documentElement.classList.add(theme);
     } else {
       window.localStorage.setItem("theme", theme);
+      console.log("No theme");
     }
-  }, [theme]);
+  }, [theme, setTheme]);
 
   const toggleTheme = () => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
+    if (document.documentElement.classList.contains("dark")) {
       document.documentElement.classList.remove("dark");
+      document.documentElement.classList.add("light");
+      setTheme("light");
+    } else {
+      document.documentElement.classList.remove("light");
+      document.documentElement.classList.add("dark");
+      setTheme("dark");
     }
   };
 
