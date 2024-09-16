@@ -18,7 +18,9 @@ const ThreejsBg: React.FC = () => {
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
 
-    renderer.setClearColor(new THREE.Color(theme ? 0x171717 : 0xe5e5e5));
+    renderer.setClearColor(
+      new THREE.Color(theme === "dark" ? 0x171717 : 0xe5e5e5)
+    );
     if (!mountRef.current) {
       console.log("mountRef is null");
     } else {
@@ -49,7 +51,7 @@ const ThreejsBg: React.FC = () => {
       if (!ctx) return null;
 
       // Draw a circle
-      ctx.fillStyle = theme ? "#e5e5e5" : "#171717";
+      ctx.fillStyle = theme === "dark" ? "#e5e5e5" : "#171717";
       ctx.beginPath();
       ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
       ctx.fill();
@@ -64,7 +66,7 @@ const ThreejsBg: React.FC = () => {
       sizeAttenuation: false,
       transparent: true,
       alphaTest: 0.5,
-      color: theme ? 0xe5e5e5 : 0x171717,
+      color: theme === "dark" ? 0xe5e5e5 : 0x171717,
     });
 
     const particleSystem = new THREE.Points(particles, particleMaterial);
