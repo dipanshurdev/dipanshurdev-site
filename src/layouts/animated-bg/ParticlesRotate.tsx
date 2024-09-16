@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import useStore from "../../libs/state";
 
-const ThreejsBg: React.FC = () => {
+const ParticlesRotate: React.FC = () => {
   const mountRef = useRef<HTMLDivElement | null>(null);
   const { theme } = useStore();
 
@@ -51,7 +51,7 @@ const ThreejsBg: React.FC = () => {
       if (!ctx) return null;
 
       // Draw a circle
-      ctx.fillStyle = theme === "dark" ? "#e5e5e5" : "#171717";
+      ctx.fillStyle = theme === "dark" ? "#e5e7eb" : "#171717";
       ctx.beginPath();
       ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
       ctx.fill();
@@ -106,4 +106,4 @@ const ThreejsBg: React.FC = () => {
     />
   );
 };
-export default ThreejsBg;
+export default ParticlesRotate;
