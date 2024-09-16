@@ -22,7 +22,7 @@ const LinkPopup = (props: Props) => {
             <img
               src={`/images/${image}`}
               className="h-[150px] w-full border-4 border-neutral-800 rounded-lg"
-              alt="Hover Image"
+              alt={children as string}
             />
           </div>
           {children}

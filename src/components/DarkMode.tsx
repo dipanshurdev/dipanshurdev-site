@@ -1,5 +1,6 @@
 import useStore from "../libs/state";
 import { useEffect } from "react";
+import { Moon, Sun } from "../utils/exportImages";
 
 const DarkModeToggle: React.FC = () => {
   const theme = useStore((mode) => mode.theme);
@@ -41,21 +42,20 @@ const DarkModeToggle: React.FC = () => {
     <button
       type="button"
       onClick={toggleTheme}
-      className="hover:ring-4 p-2 rounded-full transition-all duration-400 ease-in hover:ring-blue-700"
+      className="hover:ring-4 p-2 rounded-full duration-500 ease-in-out hover:ring-blue-700 ring-2 transition-all"
     >
-      {/* Dynamically change the icon based on the theme */}
       {theme === "dark" ? (
         <img
           title="😴 Mode"
           className="w-5 h-5"
-          src="/icons/moon.svg"
+          src={Moon.src}
           alt="Dark Mode"
         />
       ) : (
         <img
           title="😎 Mode"
           className="w-5 h-5 "
-          src="/icons/sun.svg"
+          src={Sun.src}
           alt="Light Mode"
         />
       )}

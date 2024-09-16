@@ -16,22 +16,25 @@ const HeroDesc = (props: Props) => {
   }, [widthPx]);
 
   return (
-    <div className="w-full">
+    <div className="w-full text-[#171717] dark:text-[#e5e7eb]">
       <span> Hey visitor 👋, I'm </span>
       <MyName name="Dipanshu Rawat" />
-      <div className="text-3xl leading-snug">
+      <div className="text-3xl leading-snug ">
         <span style={{ marginRight: `${widthPx}px` }}></span> a Fullstack
         Developer. I mostly like doing Frontend with
         <span>
           {" "}
-          <LinkPopup url={""} image="socialgram.png">
+          <LinkPopup
+            url="https://socialgram-me.vercel.app"
+            image="socialgram.png"
+          >
             React.js
           </LinkPopup>
         </span>
         ,
         <span>
           {" "}
-          <LinkPopup url={""} image="sumzer.png">
+          <LinkPopup url="https://sumzer.netlify.app" image="sumzer.png">
             Next.js
           </LinkPopup>
         </span>
@@ -40,14 +43,14 @@ const HeroDesc = (props: Props) => {
         trends on
         <span>
           {" "}
-          <LinkPopup url={""} image="sumzer.png">
+          <LinkPopup url="twitter.com/dipanshurdev" image="sumzer.png">
             Twitter
           </LinkPopup>
         </span>{" "}
         and
         <span>
           {" "}
-          <LinkPopup url={""} image="sumzer.png">
+          <LinkPopup url="linkedin.com/in/dipanshurdev" image="sumzer.png">
             LinkedIn
           </LinkPopup>
         </span>{" "}
