@@ -19,7 +19,7 @@ const HeroDesc = (props: Props) => {
     <div className="w-full">
       <span> Hey visitor 👋, I'm </span>
       <MyName name="Dipanshu Rawat" />
-      <p className="text-3xl leading-snug">
+      <div className="text-3xl leading-snug">
         <span style={{ marginRight: `${widthPx}px` }}></span> a Fullstack
         Developer. I mostly like doing Frontend with
         <span>
@@ -52,7 +52,7 @@ const HeroDesc = (props: Props) => {
           </LinkPopup>
         </span>{" "}
         with <span> Tea☕</span>
-      </p>
+      </div>
     </div>
   );
 };
