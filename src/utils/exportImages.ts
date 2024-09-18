@@ -5,7 +5,7 @@ import LinkedIn from "../../public/icons/linkedin.svg";
 import Moon from "../../public/icons/moon.svg";
 import Sun from "../../public/icons/sun.svg";
 import X from "../../public/icons/twitter-x.svg";
-import React from "../../public/icons/react.svg";
+import React from "../../public/icons/reactjs.svg";
 import Next from "../../public/icons/nextjs.svg";
 
 // Images
@@ -13,6 +13,8 @@ import Pictures from "../../public/images/pictures-me.png";
 import Sumzer from "../../public/images/sumzer.png";
 import SocialGram from "../../public/images/socialgram.png";
 import QueryMe from "../../public/images/query-me.png";
+import Twitter from "../../public/images/twitter.png";
+import LinkedInProfile from "../../public/images/linkedIn.png";
 
 export {
   Github,
@@ -26,4 +28,7 @@ export {
   Sumzer,
   SocialGram,
   QueryMe,
+  LinkedInProfile,
+  Twitter,
+  Next,
 };

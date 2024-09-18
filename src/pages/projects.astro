@@ -2,15 +2,25 @@
 import { Heading } from "../components";
 import MainLayout from "../layouts/MainLayout.astro";
 import projects from "../data/projects.json";
-import { Image } from "astro:assets";
 import Project from "../components/Project.astro";
 ---
 
 <MainLayout title="Projects">
   <main class="w-full h-full flex items-start justify-center flex-col px-4">
     <Heading text="Projects" />
-    <section class="w-full grid h-full grid-cols-3">
+    <section class="projects-grid">
       {projects.map((project) => <Project {...project} />)}
     </section>
   </main>
 </MainLayout>
+
+<style>
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0rem;
+    margin-top: 2rem;
+    width: 100%;
+  }
+</style>

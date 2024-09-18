@@ -139,7 +139,7 @@ const ParticlesRotate: React.FC = () => {
       mountRef.current.appendChild(renderer.domElement);
     }
 
-    const particleCount = theme === "light" ? 400 : 444; // Less particles in light mode to space them evenly
+    const particleCount = theme === "light" ? 1200 : 444; // Less particles in light mode to space them evenly
     const particles = new THREE.BufferGeometry();
 
     const positions = new Float32Array(particleCount * 3);
@@ -194,7 +194,7 @@ const ParticlesRotate: React.FC = () => {
 
     const particleMaterial = new THREE.PointsMaterial({
       map: createCircleTexture(),
-      size: 1.0, // Slightly larger in light mode
+      size: theme === "dark" ? 1.0 : 1.2,
       sizeAttenuation: false,
       transparent: true,
       alphaTest: 0.5,
@@ -202,8 +202,11 @@ const ParticlesRotate: React.FC = () => {
     });
 
     const particleSystem = new THREE.Points(particles, particleMaterial);
+
+    console.log(particleSystem);
+
     scene.add(particleSystem);
-    camera.position.z = 100;
+    camera.position.z = theme === "dark" ? 50 : 100;
 
     // Animation loop
     const animate = () => {
@@ -214,11 +217,12 @@ const ParticlesRotate: React.FC = () => {
         particleSystem.rotation.y += 0.0008;
       }
 
-      if (theme === "light") {
-        // Light mode: Blink effect by altering opacity
-        const time = Date.now() * 0.005;
-        particleMaterial.opacity = Math.abs(Math.sin(time)) * 0.8 + 0.2;
-      }
+      // if (theme === "light") {
+      //   // Light mode: Blink effect by altering opacity
+      //   const time = Date.now() * 0.005;
+
+      //   particleMaterial.opacity = Math.abs(Math.sin(time)) * 0.8 + 0.2;
+      // }
 
       renderer.render(scene, camera);
     };

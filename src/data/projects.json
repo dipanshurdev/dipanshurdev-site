@@ -1,3 +1,5 @@
+
+
 [{
     "name": "SocialGram-me",
     "url": "https://socialgram-me.vercel.app",
@@ -11,20 +13,20 @@
     "url": "https://pictures-me.netlify.app",
     "image": "/images/pictures-me.png",
     "desc": "Pictures is a full-stack social media app, where you can share your pictures to everyone. It's built with React js and backend is powered by Sanity.io. So go and share your pictures.",
-    "tech": ["reactjs", "sanity.io", "typescript"]
+    "tech": ["reactjs", "sanity", "typescript"]
 },
 {
     "name": "Query-me",
     "url": "https://querry-me.netlify.app",
     "image": "/images/query-me.png",
     "desc": "Querry-Me is a search app built with React.js and the Wikipedia Search API. It allows users to enter a query and quickly fetch relevant results from Wikipedia in real time. Simple and efficient for accessing information.",
-    "tech": ["reactjs", "wikipedia API", "search app"]
+    "tech": ["reactjs", "wikipedia", "search-app"]
 },
 {
     "name": "Sumzer",
     "url": "https://sumzer.netlify.app/",
     "image": "/images/sumzer.png",
     "desc": "Simplify your reading with Summize, an open-source article summarizer that transforms lengthy articles into clear and concise summaries",
-    "tech": ["AI", "reactjs", "redux", "API"]
+    "tech": ["ai", "reactjs", "redux", "api"]
 }
 ]

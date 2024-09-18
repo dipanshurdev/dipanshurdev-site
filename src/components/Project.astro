@@ -10,20 +10,54 @@ interface Props {
 const { name, url, image, desc, tech } = Astro.props;
 ---
 
-<div class="flex flex-col items-start justify-center">
-  <div class="h-[250px] w-[350px]">
-    <img
-      class="w-full min-h-[222px] object-contain"
-      src={image}
-      alt="Project Image"
-    />
+<div
+  class="flex flex-col dark:bg-neutral-800 bg-[#e5e7eb] shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 ease-in-out"
+>
+  <!-- Project Image -->
+  <div class="h-[200px] w-full overflow-hidden">
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="w-full h-full"
+    >
+      <img
+        class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+        src={image}
+        alt={`${name} Screenshot`}
+      />
+    </a>
   </div>
-  <div class="w-full">
-    <!-- <LinkPopup linkText={name} url={url} image={image} /> -->
-  </div>
-  <div>
-    <p>
-      {desc.length > 100 ? desc.slice(0, 100) : desc}....
-    </p>
+  <!-- Project Details -->
+  <div class="px-4 flex flex-col justify-between">
+    <!-- Project Title -->
+    <div class="w-full">
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-xl font-semibold text-blue-600 hover:underline"
+      >
+        {name}
+      </a>
+    </div>
+
+    <!-- Project Description -->
+    <div class="mb-4">
+      <p class="dark:text-[#e5e7eb] text-neutral-900 text-sm">
+        {desc.length > 100 ? `${desc.slice(0, 100)}...` : desc}
+      </p>
+    </div>
+
+    <!-- Tech Stack -->
+    <div class="flex flex-wrap gap-2 mb-4">
+      {
+        tech.map((item) => (
+          <div class="max-w-40 w-8 h-8">
+            <img src={`/icons/${item}.svg`} alt={item} class="object-fill" />
+          </div>
+        ))
+      }
+    </div>
   </div>
 </div>

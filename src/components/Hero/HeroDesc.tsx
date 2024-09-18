@@ -43,14 +43,17 @@ const HeroDesc = (props: Props) => {
         trends on
         <span>
           {" "}
-          <LinkPopup url="twitter.com/dipanshurdev" image="sumzer.png">
+          <LinkPopup url="https://twitter.com/dipanshurdev" image="twitter.png">
             Twitter
           </LinkPopup>
         </span>{" "}
         and
         <span>
           {" "}
-          <LinkPopup url="linkedin.com/in/dipanshurdev" image="sumzer.png">
+          <LinkPopup
+            url="https://linkedin.com/in/dipanshurdev"
+            image="linkedIn.png"
+          >
             LinkedIn
           </LinkPopup>
         </span>{" "}
