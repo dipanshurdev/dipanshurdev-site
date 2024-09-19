@@ -16,7 +16,7 @@ const HeroDesc = (props: Props) => {
   }, [widthPx]);
 
   return (
-    <div className="w-full text-[#171717] dark:text-[#e5e7eb]">
+    <div className="w-full text-dark dark:text-light">
       <span> Hey visitor 👋, I'm </span>
       <MyName name="Dipanshu Rawat" />
       <div className="text-3xl leading-snug ">

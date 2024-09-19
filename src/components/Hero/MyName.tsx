@@ -23,7 +23,7 @@ const MyName = (props: Props) => {
   }, [theme]);
 
   return (
-    <div className="dark:text-[#e5e7eb] text-[#171717] w-full my-2">
+    <div className="dark:text-light text-dark w-full my-2">
       <h1
         style={{ fontFamily: "Dosis Variable" }}
         className="text-7xl my-name font-bold inline dark:drop-shadow-text-lg"
