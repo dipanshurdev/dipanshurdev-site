@@ -184,6 +184,29 @@ export default {
           "0 2px 2px rgba(111, 111, 111)",
         ],
       },
+      textColor: {
+        dark: "#171717",
+        light: "#e5e7eb",
+        blueDark: "#1d4ed8",
+        neutralLight: "#171717",
+        neutralDark: "#0a0a0a",
+        slateLight: "#0f172a",
+        slateDark: "#020617",
+      },
+      backgroundColor: {
+        dark: "#171717",
+        light: "#e5e7eb",
+        neutralLight: "#171717",
+        blueDark: "#1d4ed8",
+        neutralDark: "#0a0a0a",
+        slateLight: "#0f172a",
+        slateDark: "#020617",
+      },
+    },
+
+    backgroundImage: {
+      lightBlueGradient:
+        " linear-gradient(40deg, rgba(229,231,235,1) 0%, rgba(239,246,255,1) 49%, rgba(191,219,254,1) 81%, rgba(147,197,253,1) 91%)",
     },
   },
   plugins: [],
