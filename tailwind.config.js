@@ -1,3 +1,5 @@
+import SansPro from "@fontsource/source-sans-pro";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -201,6 +203,12 @@ export default {
         darkSm: "#262626",
         slateLight: "#0f172a",
         slateDark: "#020617",
+      },
+      transitionTimingFunction: {
+        transition4s: "all 0.4s ease-in",
+      },
+      fontFamily: {
+        sansPro: "'Source Sans Pro', sans-serif",
       },
     },
 
