@@ -2,16 +2,17 @@
 interface Props {
   name: string;
   url: string;
+  githubUrl: string;
   image: string;
   desc: string;
   tech: Array<string>;
 }
 
-const { name, url, image, desc, tech } = Astro.props;
+const { name, url, image, desc, tech, githubUrl } = Astro.props;
 ---
 
 <div
-  class="flex flex-col shadow-lg rounded-lg bg-darkSm overflow-hidden hover:shadow-xl transition-shadow duration-300 ease-in-out"
+  class="flex flex-col shadow-lg rounded-lg dark:bg-darkSm bg-light overflow-hidden hover:shadow-xl transition-shadow duration-300 ease-in-out"
 >
   <!-- Project Image -->
   <div class="h-[200px] w-full overflow-hidden">
@@ -29,43 +30,61 @@ const { name, url, image, desc, tech } = Astro.props;
     </a>
   </div>
   <div class="px-4 flex flex-col justify-between">
-    <div class="w-full">
-      {name}
-    </div>
+    <div class="w-full mt-2">
+      <span class="cursor-pointer">
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-blueDark transition-all ease-in duration-300"
+        >
+          {name}
+        </a>
+      </span>
 
-    <div class="mb-4">
-      <p class="dark:text-light text-sm">
-        {desc.length > 100 ? `${desc.slice(0, 100)}...` : desc}
-      </p>
-    </div>
-
-    <div class="flex items-center justify-between gap-4 w-full">
-      <div class="flex flex-wrap items-center justify-start gap-4 mb-4 w-3/4">
-        {
-          tech.map((item) => (
-            <div
-              class={`${item === "sanity" ? "w-14" : "w-8"} inline-block h-8`}
+      <div
+        class="mb-4 dark:text-light text-sm"
+        set:html={desc.length > 100 ? `${desc.slice(0, 100)}...` : desc}
+      />
+      <div
+        class="flex
+          items-center
+          justify-between
+          gap-4
+          w-full"
+      >
+        <div class="flex flex-wrap items-center justify-start gap-4 mb-4 w-3/4">
+          {
+            tech.map((item) => (
+              <div
+                class={`${item === "sanity" ? "w-14" : "w-8"} inline-block h-8`}
+              >
+                <img
+                  src={`/icons/${item}.svg`}
+                  alt={item}
+                  class={`object-fill w-full h-full`}
+                  title={item}
+                />
+              </div>
+            ))
+          }
+        </div>
+        <div class="w-1/4 flex items-center justify-end mb-4">
+          <span>
+            <!-- <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-xl font-semibold hover:underline"
             >
               <img
-                src={`/icons/${item}.svg`}
-                alt={item}
-                class={`object-fill w-full h-full`}
+                src="/icons/github.svg"
+                class="w-8"
+                alt={`${name}'s github link`}
               />
-            </div>
-          ))
-        }
-      </div>
-      <div class="w-1/4 flex items-center justify-end mb-4">
-        <span>
-          <a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-xl font-semibold hover:underline"
-          >
-            ↗️
-          </a>
-        </span>
+            </a> -->
+          </span>
+        </div>
       </div>
     </div>
   </div>
