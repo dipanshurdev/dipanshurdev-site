@@ -4,11 +4,11 @@ type Props = {
   url: string;
   image: string;
   children: React.ReactNode;
-  icon?: string;
+  // icon?: string;
 };
 
 const LinkPopup = (props: Props) => {
-  const { url, image, icon, children } = props;
+  const { url, image, children } = props;
   return (
     <>
       <div className="hover-container">

@@ -3,9 +3,7 @@ import MyName from "./MyName";
 import "./hero.css";
 import LinkPopup from "../link_popup/LinkPopup";
 
-type Props = {};
-
-const HeroDesc = (props: Props) => {
+const HeroDesc = () => {
   const [widthPx, setwidthPx] = useState<number>(0);
 
   useEffect(() => {

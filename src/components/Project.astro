@@ -2,13 +2,13 @@
 interface Props {
   name: string;
   url: string;
-  githubUrl: string;
+  // githubUrl: string;
   image: string;
   desc: string;
   tech: Array<string>;
 }
 
-const { name, url, image, desc, tech, githubUrl } = Astro.props;
+const { name, url, image, desc, tech } = Astro.props;
 ---
 
 <div
