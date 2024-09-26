@@ -213,8 +213,10 @@ export default {
     },
 
     backgroundImage: {
-      lightBlueGradient:
+      lightGradient:
         " linear-gradient(40deg, rgba(229,231,235,1) 0%, rgba(239,246,255,1) 49%, rgba(191,219,254,1) 81%, rgba(147,197,253,1) 91%)",
+      lightGradientMain:
+        "linear-gradient(40deg, rgb(224 224 224) 10%, rgb(203 203 203) 24%, rgb(234 241 248) 80%, rgb(175 213 255) 90%)",
     },
   },
   plugins: [],
