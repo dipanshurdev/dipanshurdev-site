@@ -208,7 +208,7 @@ export default {
         transition4s: "all 0.4s ease-in",
       },
       fontFamily: {
-        sansPro: "'Source Sans Pro', sans-serif",
+        // sansPro: "Source Sans Pro",
       },
     },
 

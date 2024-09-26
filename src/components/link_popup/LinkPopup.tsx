@@ -1,4 +1,4 @@
-import "./link.css";
+import "./linkpopup.css";
 
 type Props = {
   url: string;
