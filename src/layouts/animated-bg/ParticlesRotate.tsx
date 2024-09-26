@@ -143,7 +143,7 @@ const ParticlesRotate: React.FC = () => {
         width: "100%",
         height: "100%",
       }}
-      className={theme === "light" ? "bg-lightBlueGradient" : ""}
+      className={theme === "light" ? "bg-lightGradient" : ""}
     />
   );
 };

@@ -6,7 +6,8 @@
     "githubUrl":"https://github.com/dipanshurdev/socialgram-me",
     "image": "/images/socialgram.png",
     "desc": "A social Media Image sharing application. Powered by Reactjs, Tailwindcss and React Querry for Frontend and Appwrite for Backend.",
-    "tech": ["reactjs", "react-query", "appwrite"]
+    "tech": ["reactjs", "react-query", "appwrite"],
+    "type":"project"
   
 },
 {
@@ -15,7 +16,8 @@
     "githubUrl":"https://github.com/dipanshurdev/pictures-me",
     "image": "/images/pictures-me.png",
     "desc": "Pictures is a full-stack social media app, where you can share your pictures to everyone. It's built with React js and backend is powered by Sanity.io. So go and share your pictures.",
-    "tech": ["reactjs", "sanity", "typescript"]
+    "tech": ["reactjs", "sanity", "typescript"],
+      "type":"project"
 },
 {
     "name": "Query-me",
@@ -23,7 +25,8 @@
     "githubUrl":"https://github.com/dipanshurdev/querry-me",
     "image": "/images/query-me.png",
     "desc": "Querry-Me is a search app built with React.js and the Wikipedia Search API. It allows users to enter a query and quickly fetch relevant results from Wikipedia in real time. Simple and efficient for accessing information.",
-    "tech": ["reactjs", "wikipedia", "search-app"]
+    "tech": ["reactjs", "wikipedia", "search-app"],
+      "type":"project"
 },
 {
     "name": "Sumzer",
@@ -31,7 +34,8 @@
     "githubUrl":"https://github.com/dipanshurdev/Sumzer-ai",
     "image": "/images/sumzer.png",
     "desc": "Simplify your reading with Summize, an open-source article summarizer that transforms lengthy articles into clear and concise summaries",
-    "tech": ["ai", "reactjs", "redux", "api"]
+    "tech": ["ai", "reactjs", "redux", "api"],
+      "type":"project"
 },
 {
     "name": "Sorry Bubu",
@@ -39,30 +43,36 @@
     "githubUrl":"https://github.com/dipanshurdev/bubu-dudu",
     "image": "/images/bubududu.png",
     "desc": "Dudu messed up😢, and it's time to say sorry! Will you forgive him?",
-    "tech": ["reactjs", "javascript"]
+    "tech": ["reactjs", "javascript"],
+      "type":"project"
 },
 {
     "name": "WebDevTools",
     "url": "https://wdt.adambashaahmednaji.com/",
     "githubUrl":"",
     "image": "/images/wdt.png",
-    "desc": "Collaborator at webdevtools, Actively contributed to the open-source project webdevtools, a comprehensive toolkit for web developers.",
-    "tech": ["nextjs", "opensource", "tailwindcss"]
+    "desc": "<span class='text-blue-700'> Collaborator </span> at webdevtools, Actively contributed to the open-source project webdevtools, a comprehensive toolkit for web developers.",
+    "tech": ["nextjs", "opensource", "tailwindcss"],
+      "type":"collaborator"
 },
 {
     "name": "Appwrite Website",
     "url": "https://appwrite.io",
     "githubUrl":"",
     "image": "/images/appwrite-website.png",
-    "desc": "Contributed to the open-source BaaS platform Appwrite, focusing on smaller yet impactful improvements such as bug fixes and feature enhancements.",
-    "tech": ["appwrite", "opensource", "svelte"]
+    "desc": "<span class='text-blue-700'> Contributed </span> to the open-source BaaS platform Appwrite, focusing on smaller yet impactful improvements such as bug fixes and feature enhancements.",
+    "tech": ["appwrite", "opensource", "svelte"],
+      "type":"contributor"
+    
 },
 {
     "name": "RepoRater",
     "url": "https://repo-rater.eddiehub.io/",
     "githubUrl":"",
     "image": "/images/reporater.png",
-    "desc": "Contributed to repo-rater, fixing bugs, improving UI, and adding features to enhance user experience and functionality. Addressed errors and refined the interface for a smoother, more intuitive interaction.",
-    "tech": ["nextjs", "opensource", "tailwindcss"]
+    "desc": "<p><span class='text-blue-700'> Contributed </span>to repo-rater fixing bugs, improving UI, and adding features to enhance user experience and functionality. Addressed errors and refined the interface for a smoother, more intuitive interaction.</p>",
+    "tech": ["nextjs", "opensource", "tailwindcss"],
+      "type":"contributor"
+
 }
 ]

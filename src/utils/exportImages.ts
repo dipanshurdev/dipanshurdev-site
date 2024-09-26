@@ -5,6 +5,7 @@ import LinkedIn from "../../public/icons/linkedin.svg";
 import Moon from "../../public/icons/moon.svg";
 import Sun from "../../public/icons/sun.svg";
 import X from "../../public/icons/twitter-x.svg";
+import XIcon from "../../public/icons/x.svg";
 import React from "../../public/icons/reactjs.svg";
 import Next from "../../public/icons/nextjs.svg";
 
