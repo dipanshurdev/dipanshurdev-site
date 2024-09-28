@@ -26,7 +26,7 @@ const MyName = (props: Props) => {
     <div className="dark:text-light text-dark w-full my-2">
       <h1
         style={{ fontFamily: "Dosis Variable" }}
-        className="text-7xl my-name font-bold inline dark:drop-shadow-text-lg "
+        className="text-7xl my-name font-bold inline dark:drop-shadow-blue-lg "
       >
         {props.name}
       </h1>

@@ -176,12 +176,18 @@ export default {
         flicker: "flicker 4s linear infinite alternate forwards",
       },
       dropShadow: {
-        "text-sm": "0 2px 2px rgba(5, 5, 66)",
-        "text-lg": [
+        "blue-sm": "0 2px 2px rgba(5, 5, 66)",
+        "blue-lg": [
           "0 0px 2px rgba(66, 101, 249)",
           "0 0px 2px rgba(5, 8, 76)",
           "0 0px 9px rgba(4, 16, 79)",
           "0 2px 2px rgba(111, 111, 111)",
+        ],
+        "dark-sm": [
+          "(0 0px 2px rgb(38 38 38))",
+          "(0 0px 2px rgb(232 236 242))",
+          "(0 0px 2px rgb(238 245 254))",
+          "(0 0px 4px rgb(186 215 252)",
         ],
       },
       textColor: {

@@ -24,7 +24,7 @@ const { name, url, image, desc, tech } = Astro.props;
       <img
         class="w-full h-full object-fill transform hover:scale-105 transition-transform duration-300"
         src={image}
-        alt={`${name} Screenshot`}
+        alt={`${name}-screenshot`}
       />
     </a>
   </div>
@@ -59,8 +59,8 @@ const { name, url, image, desc, tech } = Astro.props;
                 class={`${item === "sanity" ? "w-14" : "w-8"} inline-block h-8`}
               >
                 <img
-                  src={`/icons/${item}.svg`}
-                  alt={item}
+                  src={`/src/assets/icons/${item}.svg`}
+                  alt={`${item}-logo`}
                   class={`object-fill w-full h-full`}
                   title={item}
                 />
