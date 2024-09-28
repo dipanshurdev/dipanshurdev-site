@@ -23,10 +23,6 @@ const ParticlesRotate: React.FC = () => {
       new THREE.Color(theme === "dark" ? 0x171717 : 0xe5e7eb),
       0
     );
-    // renderer.setClearColor(
-    //   new THREE.Color(
-    //     0x000000
-    //   ), 0);
 
     if (!mountRef.current) {
       console.log("mountRef is null");

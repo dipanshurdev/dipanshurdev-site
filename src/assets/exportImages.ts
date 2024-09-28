@@ -5,7 +5,7 @@ import LinkedIn from "./icons/linkedin.svg";
 import Moon from "./icons/moon.svg";
 import Sun from "./icons/sun.svg";
 import X from "./icons/twitter-x.svg";
-// import X./icon from "./icons/x.svg";
+// import Xicon from "./icons/x.svg";
 import React from "./icons/reactjs.svg";
 import Next from "./icons/nextjs.svg";
 
@@ -32,4 +32,5 @@ export {
   LinkedInProfile,
   Twitter,
   Next,
+  // Xicon,
 };
