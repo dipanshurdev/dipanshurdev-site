@@ -1,6 +1,6 @@
 import useStore from "../libs/state";
 import { useEffect } from "react";
-import { Moon, Sun } from "../assets/exportImages";
+import { Moon, Sun } from "../utils/exportImages";
 
 const DarkModeToggle: React.FC = () => {
   const theme = useStore((mode) => mode.theme);
