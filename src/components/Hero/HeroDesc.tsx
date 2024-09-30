@@ -25,6 +25,7 @@ const HeroDesc = () => {
           <LinkPopup
             url="https://socialgram-me.vercel.app"
             image="socialgram.png"
+            icon="reactjs"
           >
             React.js
           </LinkPopup>
@@ -32,7 +33,11 @@ const HeroDesc = () => {
         ,
         <span>
           {" "}
-          <LinkPopup url="https://sumzer.netlify.app" image="sumzer.png">
+          <LinkPopup
+            url="https://sumzer.netlify.app"
+            image="sumzer.png"
+            icon="nextjs"
+          >
             Next.js
           </LinkPopup>
         </span>
@@ -41,7 +46,11 @@ const HeroDesc = () => {
         trends on
         <span>
           {" "}
-          <LinkPopup url="https://twitter.com/dipanshurdev" image="twitter.png">
+          <LinkPopup
+            url="https://twitter.com/dipanshurdev"
+            image="twitter.png"
+            icon=""
+          >
             Twitter
           </LinkPopup>
         </span>{" "}

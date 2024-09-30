@@ -4,11 +4,11 @@ type Props = {
   url: string;
   image: string;
   children: React.ReactNode;
-  // icon?: string;
+  icon?: string;
 };
 
 const LinkPopup = (props: Props) => {
-  const { url, image, children } = props;
+  const { url, image, children, icon } = props;
   return (
     <>
       <div className="hover-container">
@@ -28,6 +28,15 @@ const LinkPopup = (props: Props) => {
           {children}
         </a>
       </div>
+      {icon && (
+        <span className="inline-block w-10 h-10 relative ml-1">
+          <img
+            className="w-full top-[8px] absolute"
+            src={`/assets/icons/${icon}.svg`}
+            alt=""
+          />
+        </span>
+      )}
     </>
   );
 };

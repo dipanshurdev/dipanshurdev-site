@@ -1,6 +1,6 @@
 const ResumeLink = () => (
   <a
-    href="https://cv.ndo.dev/fullstack/?utm_source=portfolio&utm_medium=banner&utm_campaign=resume"
+    // href="https://cv.ndo.dev/fullstack/?utm_source=portfolio&utm_medium=banner&utm_campaign=resume"
     target="_blank"
     className="relative transition duration-300  group"
   >

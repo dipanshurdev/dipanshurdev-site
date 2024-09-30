@@ -2,13 +2,14 @@
 interface Props {
   name: string;
   url: string;
-  // githubUrl: string;
+  githubUrl: string;
   image: string;
   desc: string;
   tech: Array<string>;
 }
+import { GithubCircle } from "../utils/exportImages";
 
-const { name, url, image, desc, tech } = Astro.props;
+const { name, url, image, desc, tech, githubUrl } = Astro.props;
 ---
 
 <div
@@ -30,16 +31,34 @@ const { name, url, image, desc, tech } = Astro.props;
   </div>
   <div class="px-4 flex flex-col justify-between">
     <div class="w-full mt-2">
-      <span class="cursor-pointer">
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hover:text-blueDark transition-all ease-in duration-300"
-        >
-          {name}
-        </a>
-      </span>
+      <div
+        class="cursor-pointer flex w-full flex-row justify-between items-center"
+      >
+        <span>
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-blueDark transition-all ease-in duration-300"
+          >
+            {name}
+          </a>
+        </span>
+        {
+          githubUrl && (
+            <span>
+              <a
+                href={githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-blueDark transition-all ease-in duration-300"
+              >
+                <img src={GithubCircle.src} class="w-6 h-6" alt="Github Icon" />
+              </a>
+            </span>
+          )
+        }
+      </div>
 
       <div
         class="mb-4 dark:text-light text-sm"
