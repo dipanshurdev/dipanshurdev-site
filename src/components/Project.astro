@@ -7,7 +7,7 @@ interface Props {
   desc: string;
   tech: Array<string>;
 }
-import { GithubCircle } from "../utils/exportImages";
+import { Github } from "../utils/exportImages";
 
 const { name, url, image, desc, tech, githubUrl } = Astro.props;
 ---
@@ -53,7 +53,12 @@ const { name, url, image, desc, tech, githubUrl } = Astro.props;
                 rel="noopener noreferrer"
                 class="hover:text-blueDark transition-all ease-in duration-300"
               >
-                <img src={GithubCircle.src} class="w-6 h-6" alt="Github Icon" />
+                <img
+                  src={Github.src}
+                  title="github link"
+                  class="w-6 h-6"
+                  alt="Github Icon"
+                />
               </a>
             </span>
           )

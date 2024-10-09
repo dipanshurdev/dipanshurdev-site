@@ -1,6 +1,6 @@
 // ./icons
 import Github from "../../public/assets/icons/github.svg";
-import GithubCircle from "../../public/assets/icons/github-circle.svg";
+
 import Gmail from "../../public/assets/icons/gmail.svg";
 import LinkedIn from "../../public/assets/icons/linkedin.svg";
 import Moon from "../../public/assets/icons/moon.svg";
@@ -33,6 +33,5 @@ export {
   LinkedInProfile,
   Twitter,
   Next,
-  GithubCircle,
   // Xicon,
 };
