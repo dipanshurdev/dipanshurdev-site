@@ -34,15 +34,27 @@ const { name, url, image, desc, tech, githubUrl } = Astro.props;
       <div
         class="cursor-pointer flex w-full flex-row justify-between items-center"
       >
-        <span>
-          <a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hover:text-blueDark transition-all ease-in duration-300"
-          >
+        <span
+          class="hover:text-blueDark text-blue-500 transition-all ease-in duration-300 flex flex-row items-center justify-center gap-1"
+        >
+          <a href={url} target="_blank" rel="noopener noreferrer">
             {name}
           </a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-external-link"
+            ><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path
+              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+            ></path></svg
+          >
         </span>
         {
           githubUrl && (

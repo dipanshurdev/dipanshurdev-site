@@ -1,12 +1,13 @@
 // ./icons
 import Github from "../../public/assets/icons/github.svg";
-
+import LeftArrow from "../../public/assets/icons/arrowLeft.svg";
+import RightArrow from "../../public/assets/icons/left-chevron.svg";
+import Link from "../../public/assets/icons/externalLink.svg";
 import Gmail from "../../public/assets/icons/gmail.svg";
 import LinkedIn from "../../public/assets/icons/linkedin.svg";
 import Moon from "../../public/assets/icons/moon.svg";
 import Sun from "../../public/assets/icons/sun.svg";
 import X from "../../public/assets/icons/twitter-x.svg";
-// import Xicon from "../../public/assets/icons/x.svg";
 import React from "../../public/assets/icons/reactjs.svg";
 import Next from "../../public/assets/icons/nextjs.svg";
 
@@ -33,5 +34,8 @@ export {
   LinkedInProfile,
   Twitter,
   Next,
+  LeftArrow,
+  RightArrow,
+  Link,
   // Xicon,
 };

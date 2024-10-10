@@ -194,6 +194,7 @@ export default {
         dark: "#171717",
         light: "#e5e7eb",
         blueDark: "#1d4ed8",
+        // blueLight: "#1d4ed8", blue-500
         darkSm: "#262626",
         darkExtra: "#0a0a0a",
         slateLight: "#0f172a",
