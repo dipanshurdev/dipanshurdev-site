@@ -1,6 +1,17 @@
 
 
-[{
+[ {
+    "name": "DevPath",
+    "url": "https://devpath.netlify.app",
+    "githubUrl":"https://github.com/dipanshurdev/devpath",
+    "image": "/assets/images/devpath.png",
+    "desc": "DevPath is an interactive roadmap platform for developers, offering structured learning paths, resources, and guides to master technical skills.",
+    "tech": ["nextjs", "appwrite", "typescript", "tailwindcss"],
+    "type":"project"
+  
+},
+
+  {
     "name": "SocialGram-me",
     "url": "https://socialgram-me.vercel.app",
     "githubUrl":"https://github.com/dipanshurdev/socialgram-me",
@@ -10,6 +21,7 @@
     "type":"project"
   
 },
+
 {
     "name": "Pictures-me",
     "url": "https://pictures-me.netlify.app",
