@@ -41,6 +41,15 @@
       "type":"project"
 },
 {
+    "name": "Prompting",
+    "url": "https://prompting-ai.vercel.app",
+    "githubUrl":"https://github.com/dipanshurdev/prompting",
+    "image": "/assets/images/prompting.png",
+    "desc": "Prompting is an open-source AI prompt based tool for modren world to discover, create and share creative prompts.",
+    "tech": ["nextjs", "mongodb", "tailwindcss"],
+      "type":"project"
+},
+{
     "name": "Sumzer",
     "url": "https://sumzer.netlify.app/",
     "githubUrl":"https://github.com/dipanshurdev/Sumzer-ai",
