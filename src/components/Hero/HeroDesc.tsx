@@ -16,7 +16,7 @@ const HeroDesc = () => {
   return (
     <div className="w-full text-dark dark:text-light">
       <span> Hey visitor 👋, I'm </span>
-      <MyName name="dipanshurdev" />
+      <MyName name="Dipanshu Rawat" />
       <div className="text-3xl leading-snug ">
         <span style={{ marginRight: `${widthPx}px` }}></span> a Fullstack
         Developer. I mostly like doing Frontend with
