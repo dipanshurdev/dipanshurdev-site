@@ -15,7 +15,7 @@ const HeroDesc = () => {
 
   return (
     <div className="w-full text-dark dark:text-light">
-      <span> Hey visitor 👋, I'm </span>
+      <span> Hey there👋, I'm </span>
       <MyName name="Dipanshu Rawat" />
       <div className="text-3xl leading-snug ">
         <span style={{ marginRight: `${widthPx}px` }}></span> a Fullstack
@@ -34,8 +34,8 @@ const HeroDesc = () => {
         <span>
           {" "}
           <LinkPopup
-            url="https://sumzer.netlify.app"
-            image="sumzer.png"
+            url="https://devpath.netlify.app"
+            image="devpath.png"
             icon="nextjs"
           >
             Next.js
@@ -49,7 +49,7 @@ const HeroDesc = () => {
           <LinkPopup
             url="https://twitter.com/dipanshurdev"
             image="twitter.png"
-            icon=""
+            icon="bird"
           >
             Twitter
           </LinkPopup>
@@ -60,6 +60,7 @@ const HeroDesc = () => {
           <LinkPopup
             url="https://linkedin.com/in/dipanshurdev"
             image="linkedIn.png"
+            icon="linkedin-man"
           >
             LinkedIn
           </LinkPopup>
