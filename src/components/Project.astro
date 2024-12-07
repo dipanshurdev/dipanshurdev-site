@@ -12,33 +12,37 @@ const { name, url, image, desc, tech, githubUrl } = Astro.props;
 ---
 
 <div
-  class="flex flex-col shadow-lg rounded-lg dark:bg-darkSm bg-light overflow-hidden hover:shadow-xl transition-shadow duration-300 ease-in-out"
+  class="group flex flex-col shadow-lg rounded-lg dark:bg-[#18181b] bg-white overflow-hidden hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1"
 >
-  <div class="h-[200px] w-full overflow-hidden">
+  <div class="relative h-48 w-full overflow-hidden">
     <a
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      class="w-full h-full"
+      class="block w-full h-full"
     >
       <img
-        class="w-full h-full object-fill transform hover:scale-105 transition-transform duration-300"
+        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
         src={image}
-        alt={`${name}-screenshot`}
+        alt={`${name} project screenshot`}
+        loading="lazy"
       />
+      <div
+        class="absolute inset-0 bg-black opacity-0 group-hover:opacity-30 transition-opacity duration-300"
+      >
+      </div>
     </a>
   </div>
-  <div class="px-4 flex flex-col justify-between">
-    <div class="w-full mt-2">
-      <div
-        class="cursor-pointer flex w-full flex-row justify-between items-center"
-      >
-        <span
-          class="hover:text-blueDark text-blue-500 transition-all ease-in duration-300 flex flex-row items-center justify-center gap-1"
+  <div class="px-6 py-2 flex flex-col justify-evenly flex-grow">
+    <div>
+      <div class="flex justify-between items-center mb-2">
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-xl font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-300 flex items-center gap-2"
         >
-          <a href={url} target="_blank" rel="noopener noreferrer">
-            {name}
-          </a>
+          {name}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="22"
@@ -54,67 +58,50 @@ const { name, url, image, desc, tech, githubUrl } = Astro.props;
               d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
             ></path></svg
           >
-        </span>
+        </a>
         {
           githubUrl && (
-            <span>
-              <a
-                href={githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="hover:text-blueDark transition-all ease-in duration-300"
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-300"
+              aria-label={`View ${name} source code on GitHub`}
+            >
+              <svg
+                class="w-5 h-5 fill-none stroke-current"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
-               <?xml version="1.0" ?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg class="w-5 h-5 fill-none stroke-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.7444 14C5.13962 13 5.64768 8.5 7.67987 7C7.27882 6.39155 6.66375 4 7.1718 3.00001C8.18792 3.5 9.55173 4.23944 10.2202 5C12.2524 4 15.3007 4 16.8249 5C17.226 4.18873 18.6968 3.42254 19.3652 3C19.9668 3.60845 19.5323 5.98592 19.3652 7C20.3678 9.19718 20.8894 12.5 15.3007 14C16.1273 14.6688 17.4571 16.2652 18.3819 18.0893C19.0373 19.3821 17.7844 20.5701 16.3571 20.3176C15.3606 20.1413 14.2545 20 13.2685 20C12.0745 20 10.494 20.2071 9.12617 20.4329C7.71155 20.6663 6.56735 19.4472 7.29296 18.2106C7.81974 17.3128 8.48393 16.4725 9.20408 16C8.95342 15.662 7.9605 14.6887 6.15574 15.5C3.89979 16.5141 2.60607 14.2676 3.10739 13" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </span>
+                <path
+                  d="M11.7444 14C5.13962 13 5.64768 8.5 7.67987 7C7.27882 6.39155 6.66375 4 7.1718 3.00001C8.18792 3.5 9.55173 4.23944 10.2202 5C12.2524 4 15.3007 4 16.8249 5C17.226 4.18873 18.6968 3.42254 19.3652 3C19.9668 3.60845 19.5323 5.98592 19.3652 7C20.3678 9.19718 20.8894 12.5 15.3007 14C16.1273 14.6688 17.4571 16.2652 18.3819 18.0893C19.0373 19.3821 17.7844 20.5701 16.3571 20.3176C15.3606 20.1413 14.2545 20 13.2685 20C12.0745 20 10.494 20.2071 9.12617 20.4329C7.71155 20.6663 6.56735 19.4472 7.29296 18.2106C7.81974 17.3128 8.48393 16.4725 9.20408 16C8.95342 15.662 7.9605 14.6887 6.15574 15.5C3.89979 16.5141 2.60607 14.2676 3.10739 13"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
           )
         }
       </div>
-
       <div
-        class="mb-4 dark:text-light text-sm"
-        set:html={desc.length > 100 ? `${desc.slice(0, 100)}...` : desc}
+        class="text-[#18181b] dark:text-gray-300 text-sm"
+        set:html={desc.length > 150 ? `${desc.slice(0, 150)}...` : desc}
       />
-      <div
-        class="flex
-          items-center
-          justify-between
-          gap-4
-          w-full"
-      >
-        <div class="flex flex-wrap items-center justify-start gap-4 mb-4 w-3/4">
-          {
-            tech.map((item) => (
-              <div
-                class={`${item === "sanity" ? "w-14" : "w-8"} inline-block h-8`}
-              >
-                <img
-                  src={`/assets/icons/${item}.svg`}
-                  alt={`${item}-logo`}
-                  class={`object-fill w-full h-full`}
-                  title={item}
-                />
-              </div>
-            ))
-          }
-        </div>
-        <div class="w-1/4 flex items-center justify-end mb-4">
-          <span>
-            <!-- <a
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-xl font-semibold hover:underline"
-            >
+    </div>
+    <div class="my-4">
+      <div class="flex flex-wrap items-center gap-2">
+        {
+          tech.map((item) => (
+            <div class="tech-icon group inline-block" title={item}>
               <img
-                src="/icons/github.svg"
-                class="w-8"
-                alt={`${name}'s github link`}
+                src={`/assets/icons/${item}.svg`}
+                alt={`${item} logo`}
+                class="w-8 h-8 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
               />
-            </a> -->
-          </span>
-        </div>
+            </div>
+          ))
+        }
       </div>
     </div>
   </div>
