@@ -1,3 +1,59 @@
 I’m Dipanshu Rawat a full-stack developer with expertise in building web apps, seamless user interfaces and reliable server-side architectures. Skilled in React.js, Node.js, TypeScript, MongoDB, and Express.js, I enjoy crafting complete solutions from front to back. I’m passionate about learning new technologies, optimizing performance, and collaborating to bring ideas to life.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 I’m a self-taught Full Stack Developer with experience in building scalable web applications using React, Next.js, Node.js, and MongoDB. I’ve developed impactful projects, including interactive learning platforms and AI-powered tools, and actively contribute to open-source communities. I’m seeking a full-stack role where I can collaborate with talented teams to create innovative, user-focused solutions while continuing to grow as a developer.
+
+--------------------------------------------------------------Short CV---------------------------------------------------------------------
+Dipanshu Rawat
+Prayagraj, Uttar Pradesh, India
+📞 +91 7987968023 | 📧 dv451197@gmail.com
+🌐 Portfolio | GitHub | LinkedIn
+
+Professional Summary
+A passionate Full-Stack Developer with over 2 years of experience, driven by a fascination for creating seamless digital solutions. Adept at designing and deploying scalable applications with modern tools like React.js, Next.js, and MongoDB. Skilled in solving complex technical challenges, contributing to open-source projects, and delivering impactful solutions. Committed to continuous learning and fostering effective collaboration.
+
+Technical Skills
+Frontend Development: React.js, Next.js, Astro.build, SvelteKit, JavaScript (ES6+), TypeScript, HTML, CSS, Redux, Tailwind CSS, React Query
+Backend Development: Node.js, Express.js, Appwrite, Firebase, Prisma
+Database Management: MongoDB, PostgreSQL, Firebase, Appwrite
+Tools & Technologies: Git, GitHub, REST APIs, OpenAI (ChatGPT), Open-Source Contributions
+Soft Skills: Problem-Solving, Team Collaboration, Communication, Quick Learning
+
+Projects
+
+DevPath – Interactive Learning Platform
+Oct 2024 – Present
+-Designed a roadmap platform that increased user retention by 30%.
+-Developed structured learning paths with tailored resources to enhance engagement.
+-Integrated Reactflow to create dynamic visual maps for intuitive navigation.
+
+SocialGram – Social Media Application
+Jul 2024 – Aug 2024
+-Built a social platform with secure authentication and real-time photo-sharing.
+-Reduced API data load times by 40% using React Query.
+
+Sumzer – AI-Powered Article Summarizer
+Mar 2024 – May 2024
+-Created an intuitive interface for summarizing lengthy articles.
+-Optimized API integration, reducing summarization response time by 25%.
+
+Query Me – Wikipedia-Powered Search App
+Dec 2023 – Jan 2024
+-Built a search application leveraging the Wikipedia API for real-time results.
+-Designed a responsive UI, improving usability and scalability.
+
+Education
+
+Fullstack Development Certification
+freeCodeCamp | Aug 2023 – Jan 2024
+
+Frontend Development Libraries Certification
+freeCodeCamp | Feb 2023 – Mar 2023
+
+Legacy Frontend Development Certification
+freeCodeCamp | Feb 2023 – May 2023
+
+Open Source Contributions
+
+EddieHubCommunity: Enhanced usability by fixing bugs and adding success alerts.
+WebDevTools: Developed a Resume Builder tool and improved GitHub Issue Finder.
+Appwrite Website: Addressed critical bugs and proposed feature enhancements.
