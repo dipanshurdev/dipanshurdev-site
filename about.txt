@@ -57,3 +57,21 @@ Open Source Contributions
 EddieHubCommunity: Enhanced usability by fixing bugs and adding success alerts.
 WebDevTools: Developed a Resume Builder tool and improved GitHub Issue Finder.
 Appwrite Website: Addressed critical bugs and proposed feature enhancements.
+
+------------------------------------------------
+Dipanshu Rawat
+Prayagraj, Uttar Pradesh, India | +91 79879 68023 | dv451197@gmail.com
+github.com/dipanshurdev | dipanshurdev.netlify.app | linkedin.com/in/dipanshurdevSUMMARY
+Self-taught Full-Stack Developer with 2+ years of hands-on experience building scalable web apps using React.js, Next.js, Node.js, and MongoDB. Delivered projects like DevPath (30% retention boost) and optimized performance (e.g., 40% faster APIs). Contributed to open-source (Appwrite, 45k stars). Passionate about coding, problem-solving, and shipping impactful solutions.PROJECTS
+DevPath - Interactive Learning Platform
+Oct 2024 - PresentBuilt with React, Reactflow, MongoDB to guide developers with dynamic skill roadmaps.Boosted user retention by 30% via tailored resources and visual navigation.Deployed a categorized library for enhanced UX.
+[Live Link] | [GitHub]SocailGram - Social Media Application
+Jul 2024 - Aug 2024Developed with React, Node.js, Firebase for secure auth and real-time photo sharing.Cut data load times by 40% using React Query for API optimization.Designed responsive UI with Shadcn, lifting engagement by 25%.
+[Live Link] | [GitHub]Sumzer - Article Summarizer
+Mar 2024 - May 2024Created with React.js, OpenAI API to summarize articles efficiently.Reduced API response time by 25% with optimized integration.Built an accessible, dynamic UI for seamless UX.
+[Live Link] | [GitHub]Quarry Me - Wikipedia-Powered Search App
+Dec 2023 - Jan 2024Engineered with React.js, Wikipedia API for real-time search results.Sped up data fetching by 30% with async optimization.Crafted a scalable, responsive UI with reusable components.
+[Live Link] | [GitHub]OPEN-SOURCE CONTRIBUTIONSEddieHubCommunity (6.1k Stars): Fixed bugs, added success alerts for better UX.Appwrite (45.2k Stars): Resolved bugs, proposed features for stability.WebDevTools (49 Stars): Built Resume Builder, enhanced GitHub Issue Finder.SKILLSFrontend: React.js, Next.js, JavaScript (ES6+), TypeScript, Tailwind CSS, React QueryBackend: Node.js, Express.js, Appwrite, FirebaseDatabases: MongoDB, PostgreSQLTools: Git, GitHub, REST APIs, NetlifySoft Skills: Problem-Solving, Quick Learning, CollaborationEDUCATION
+Full-Stack Development Certification
+freeCodeCamp | Aug 2023 - Jan 2024Mastered MERN stack and REST APIs via hands-on projects.Frontend Development Certification
+freeCodeCamp | Feb 2023 - May 2023Built dynamic web apps with React.js and JavaScript.
