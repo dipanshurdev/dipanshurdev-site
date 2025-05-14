@@ -1,5 +1,6 @@
 ---
-import { Footer, Navbar } from "../components";
+import { Footer } from "../components";
+import Navbar from "../components/Navbar/Navbar";
 import Layout from "./Layout.astro";
 import "@fontsource-variable/dosis";
 
@@ -11,7 +12,9 @@ const { title } = Astro.props;
 ---
 
 <Layout title={title}>
-  <main>
+  <main
+    class="flex items-center justify-between flex-col mx-auto p-4 w-full h-full min-h-screen overflow-y-scroll overflow-x-hidden max-w-[70rem] sm:max-w-screen-lg text-1.5rem leading-1.6"
+  >
     <Navbar />
     <slot />
     <Footer />
@@ -20,23 +23,23 @@ const { title } = Astro.props;
 
 <style>
   main {
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    margin: auto;
-    padding: 1rem;
+    margin: auto; */
+    /* padding: 1rem;
     width: 100%;
     height: 100%;
     min-height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
-    max-width: 70rem;
+    max-width: 70rem; */
     /* font-family: "Dosis Variable"; */
     /* font-family: "Open Sans"; */
     font-family: "Dosis Variable";
-    font-size: 1.5rem;
+    /* font-size: 1.5rem;
     line-height: 1.6;
-    background: transparent;
+    background: transparent; */
   }
 </style>
