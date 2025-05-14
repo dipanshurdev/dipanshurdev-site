@@ -6,6 +6,8 @@ const ParticlesRotate: React.FC = () => {
   const mountRef = useRef<HTMLDivElement | null>(null);
   const { theme } = useStore(); // Access the theme (dark or light mode)
 
+  if (!theme) return null;
+
   useEffect(() => {
     // Scene setup
     const scene = new THREE.Scene();
@@ -15,7 +17,7 @@ const ParticlesRotate: React.FC = () => {
       0.1,
       1000
     );
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
 
     // Set background color based on theme
@@ -30,7 +32,7 @@ const ParticlesRotate: React.FC = () => {
       mountRef.current.appendChild(renderer.domElement);
     }
 
-    const particleCount = theme === "light" ? 1200 : 444; // Less particles in light mode to space them evenly
+    const particleCount = theme === "light" ? 1200 : 888;
     const particles = new THREE.BufferGeometry();
 
     const positions = new Float32Array(particleCount * 3);
@@ -132,10 +134,10 @@ const ParticlesRotate: React.FC = () => {
     <div
       ref={mountRef}
       style={{
-        position: "absolute",
+        position: "fixed",
         top: 0,
         left: 0,
-        zIndex: -1,
+        zIndex: -5,
         width: "100%",
         height: "100%",
       }}

@@ -1,12 +1,12 @@
 ---
-import ParticlesRotate from "../layouts/animated-bg/ParticlesRotate";
 import SuperHero from "../components/Hero/SuperHero.astro";
+import ParticlesRotate from "../layouts/animated-bg/ParticlesRotate";
 import MainLayout from "../layouts/MainLayout.astro";
 
 // import "@fontsource-variable/dosis";
 ---
 
 <MainLayout title="dipanshurdev">
-  <ParticlesRotate client:only="react" />
+  <ParticlesRotate client:load />
   <SuperHero />
 </MainLayout>
