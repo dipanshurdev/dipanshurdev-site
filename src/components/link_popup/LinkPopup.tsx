@@ -29,9 +29,14 @@ const LinkPopup = (props: Props) => {
         </a>
       </div>
       {icon && (
-        <span className="inline-block w-10 h-10 relative ml-1">
+        <span className="inline-block w-10 h-10 max-sm:w-8 max-sm:h-8 relative ml-1 ">
+          {/* max-sm:w-2/3 max-sm:top-[22px]  */}
           <img
-            className="w-full top-[8px] absolute"
+            className="
+            w-full 
+         
+            top-[8px] absolute
+            "
             src={`/assets/icons/${icon}.svg`}
             alt=""
           />

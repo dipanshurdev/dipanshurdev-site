@@ -1,18 +1,23 @@
+import { useState } from "react";
 import DarkModeToggle from "../DarkMode";
 import ResumeLink from "../ResumeLink";
 import "./nav.css";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className="w-full text-2xl my-2 p-4 flex flex-row items-center justify-between dark:text-light text-dark">
-      <div className="gap-4 flex items-center">
-        {/* <div className="inline-block w-full">
-      <img src={Logo.src} alt="dipanshurdev" className="w-20 h-20 " />
-    </div>  */}
-        <div className="text-blue-700 flex items-center flex-row gap-1">
-          <a href="/"> home </a>
+    <nav className="w-full p-4 flex items-center justify-between text-2xl dark:text-light text-dark relative">
+      <div className="block md:hidden w-full ">
+        <span className="text-2xl font-bold bg-lightGradient bg-clip-text text-transparent gradient-stroke">
+          dipanshurdev
+        </span>
+      </div>
+
+      <div className="flex items-center gap-4">
+        <div className="text-blue-700 hidden md:flex items-center gap-1">
+          <a href="/">home</a>
           <svg
-            xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
             viewBox="0 0 24 24"
@@ -21,17 +26,14 @@ const Navbar = () => {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="lucide lucide-house"
           >
-            <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
-            <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+            <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
           </svg>
         </div>
-        {/* <!-- <span className="underline">
-      <a href="/about-me"> about </a>
-    </span> --> */}
-        <div className="underline flex items-center flex-row gap-1">
-          <a href="/projects"> projects </a>
+
+        <div className="underline hidden md:flex items-center gap-1">
+          <a href="/projects">projects</a>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="24"
@@ -44,13 +46,55 @@ const Navbar = () => {
             ></path>
           </svg>
         </div>
-        <span className="underline">
+
+        <span className="underline hidden md:inline-block">
+          <a href="/about-me">About me</a>
+        </span>
+
+        <span className="underline hidden md:inline-block">
           <ResumeLink />
         </span>
       </div>
-      <div className="flex items-center gap-4 cursor-pointer justify-center">
+
+      {/* Dark mode toggle */}
+      <div className="flex items-center gap-4">
         <DarkModeToggle />
+        <button
+          className="md:hidden flex flex-col justify-center items-center"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle Menu"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-menu-icon lucide-menu"
+          >
+            <path d="M4 12h16" />
+            <path d="M4 18h16" />
+            <path d="M4 6h16" />
+          </svg>
+        </button>
       </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="absolute top-full left-0 w-full bg-lightGradient dark:bg-darkSm text-base flex flex-col items-start px-4 rounded-lg py-3 gap-4 shadow-md md:hidden z-50">
+          <a href="/" className="text-blue-700 flex items-center gap-2">
+            home
+          </a>
+          <a href="/projects" className="underline flex items-center gap-2">
+            projects
+          </a>
+          <ResumeLink />
+        </div>
+      )}
     </nav>
   );
 };
