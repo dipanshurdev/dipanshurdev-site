@@ -219,9 +219,9 @@ export default {
 
     backgroundImage: {
       lightGradient:
-        "linear-gradient(44deg,rgba(203, 213, 225, 1) 16%, rgba(148, 163, 184, 1) 35%, rgba(147, 197, 253, 1) 57%, rgba(59, 130, 246, 1) 71%, rgba(203, 213, 225, 1) 100%)",
+        "linear-gradient(28deg, rgb(218 218 218) 12%, rgba(79, 164, 255, 1) 36%, rgba(33, 118, 255, 1) 56%, rgba(171, 205, 255, 1) 70%, rgb(224 224 224) 95%)",
       lightGradientMain:
-        "linear-gradient(40deg, rgb(224 224 224) 10%, rgb(203 203 203) 24%, rgb(234 241 248) 80%, rgb(175 213 255) 90%)",
+        "linear-gradient(45deg,rgba(237, 237, 237, 1) 30%, rgba(222, 222, 222, 1) 82%, rgba(82, 148, 255, 1) 96%, rgb(5 43 255) 100%) 100%)",
       lowDarkGradient:
         "linear-gradient(60deg, rgba(0, 0, 0, 1) 44%, rgba(23, 23, 23, 1) 77%, rgba(46, 46, 46, 1) 100%)",
     },
