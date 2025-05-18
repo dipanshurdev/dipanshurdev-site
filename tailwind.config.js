@@ -219,11 +219,11 @@ export default {
 
     backgroundImage: {
       lightGradient:
-        " linear-gradient(40deg, rgba(229,231,235,1) 0%, rgba(239,246,255,1) 49%, rgba(191,219,254,1) 81%, rgba(147,197,253,1) 91%)",
+        "linear-gradient(44deg,rgba(203, 213, 225, 1) 16%, rgba(148, 163, 184, 1) 35%, rgba(147, 197, 253, 1) 57%, rgba(59, 130, 246, 1) 71%, rgba(203, 213, 225, 1) 100%)",
       lightGradientMain:
         "linear-gradient(40deg, rgb(224 224 224) 10%, rgb(203 203 203) 24%, rgb(234 241 248) 80%, rgb(175 213 255) 90%)",
-      pinkToVilot:
-        "linear-gradient(180deg, rgba(0, 5, 255, 1) 20%, rgba(255, 255, 255, 1) 50%, rgba(25, 5, 255, 1) 80%  ) ",
+      lowDarkGradient:
+        "linear-gradient(60deg, rgba(0, 0, 0, 1) 44%, rgba(23, 23, 23, 1) 77%, rgba(46, 46, 46, 1) 100%)",
     },
   },
   plugins: [],
