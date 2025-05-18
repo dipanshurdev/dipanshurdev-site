@@ -1,84 +1,70 @@
-import { motion } from "framer-motion";
-import { FaUserAlt } from "react-icons/fa";
+import { motion, useInView } from "framer-motion";
+// import { FaUserAlt } from "react-icons/fa";
 import { Button } from "../ui/Button";
-const HeroSection = () => {
+import { useRef } from "react";
+
+export default function () {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false, amount: 0.2 });
+
   return (
     <motion.section
+      ref={ref}
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      className="relative pt-10"
+      animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+      transition={{ duration: 0.6 }}
+      className="space-y-4"
     >
       <motion.div
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 rounded-full bg-pinkToVilot blur-xl opacity-20 dark:opacity-30"
-      />
+        initial={{ x: -20, opacity: 0 }}
+        animate={isInView ? { x: 0, opacity: 1 } : { x: -20, opacity: 0 }}
+        transition={{ duration: 0.5 }}
+        className="flex items-center gap-2"
+      >
+        <div className="h-px bg-dark dark:bg-light w-6"></div>
+        <h2 className="text-2xl font-bold text-dark dark:text-light">
+          About Me
+        </h2>
+      </motion.div>
+
+      <motion.p
+        initial={{ y: 20, opacity: 0 }}
+        animate={isInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="text-dark dark:text-light leading-relaxed"
+      >
+        I'm a self-taught full-stack developer passionate about building tools
+        that solve real-world problems. Over the last 2+ years, I've shipped
+        projects using{" "}
+        <strong>React.js, Next.js, Supabase, Prisma, Tailwind</strong> and
+        contributed to global open-source communities.
+      </motion.p>
+
+      <motion.p
+        initial={{ y: 20, opacity: 0 }}
+        animate={isInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="text-dark dark:text-light leading-relaxed"
+      >
+        My journey in web development began with a curiosity about how websites
+        work and quickly evolved into a passion for creating intuitive,
+        accessible, and performant web applications. I enjoy the challenge of
+        learning new technologies and applying them to solve complex problems.
+      </motion.p>
 
       <motion.div
-        initial={{ y: 30, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        className="text-center relative z-10"
+        initial={{ y: 20, opacity: 0 }}
+        animate={isInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="flex flex-wrap gap-3 pt-2"
       >
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{
-            duration: 0.5,
-            delay: 0.3,
-            type: "spring",
-            stiffness: 200,
-          }}
-          className="w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-xl"
-        >
-          <div className="w-full h-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center">
-            <FaUserAlt className="text-white text-4xl" />
-          </div>
-        </motion.div>
-
-        <motion.h1
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-5xl sm:text-6xl font-extrabold mb-6"
-        >
-          <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
-            About Me
-          </span>
-        </motion.h1>
-
-        <motion.p
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto mb-8 text-slate-700 dark:text-slate-300"
-        >
-          I'm <strong>Dipanshu Rawat</strong>, a self-taught full-stack
-          developer passionate about building tools that solve real-world
-          problems. Over the last 2+ years, I've shipped projects using{" "}
-          <strong>React.js, Next.js, Supabase, Prisma, Tailwind</strong> and
-          contributed to global open-source communities.
-        </motion.p>
-
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
-          className="flex flex-wrap gap-3 justify-center"
-        >
-          <Button
-            variant="default"
-            className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 dark:from-indigo-500 dark:to-purple-500"
-          >
-            View Projects
-          </Button>
-          <Button variant="outline">Download Resume</Button>
-        </motion.div>
+        <Button variant="outline" className="outline-blue-800 outline-2 p-4 ">
+          View Projects
+        </Button>
+        <Button variant="outline">Download Resume</Button>
       </motion.div>
     </motion.section>
   );
-};
+}
 
-export default HeroSection;
+// export default HeroSection;

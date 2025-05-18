@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-const TimelineItem = ({
+export default function TimelineItem({
   year,
   title,
   description,
@@ -7,7 +7,7 @@ const TimelineItem = ({
   delay,
   isInView,
   position,
-}: any) => {
+}: any) {
   return (
     <motion.div
       initial={{ opacity: 0, x: position === "left" ? -50 : 50 }}
@@ -40,6 +40,6 @@ const TimelineItem = ({
       <div className="w-1/2"></div>
     </motion.div>
   );
-};
+}
 
-export default TimelineItem;
+// export default TimelineItem;

@@ -1,8 +1,9 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import TimelineItem from "./TimelineItem";
+import { TimelineItem } from "./index";
 import { FaAward, FaCode, FaGithub, FaReact } from "react-icons/fa";
-const JourneySection = () => {
+
+export default function JourneySection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.2 });
 
@@ -63,6 +64,6 @@ const JourneySection = () => {
       </div>
     </motion.section>
   );
-};
+}
 
-export default JourneySection;
+// export default JourneySection;

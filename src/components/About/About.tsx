@@ -1,76 +1,88 @@
-"use client";
-
-// import { useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-// import {
-//   FaReact,
-//   FaNodeJs,
-//   FaGithub,
-//   FaHtml5,
-//   FaCss3Alt,
-//   FaLinkedin,
-//   FaTools,
-//   FaCode,
-//   FaGraduationCap,
-//   FaAward,
-//   FaUserAlt,
-// } from "react-icons/fa";
-// import {
-//   SiNextdotjs,
-//   SiTailwindcss,
-//   SiSupabase,
-//   SiPrisma,
-//   SiTypescript,
-//   SiJavascript,
-//   SiGit,
-// } from "react-icons/si";
-// import { MdOpenInNew } from "react-icons/md";
-// import { Button } from "../ui/Button";
-import HeroSection from "./HeroSection";
-import JourneySection from "./JourneySection";
-import TechStackSection from "./TechStackSection";
-import OpenSourceSection from "./OpenSourceSection";
-import CredentialsSection from "./CredentialsSection";
-import ConnectSection from "./ConnectSection";
-// import { Badge } from "@/components/ui/badge";
+import { FaUserAlt } from "react-icons/fa";
+import {
+  HeroSection,
+  SkillsSection,
+  OpenSourceSection,
+  EducationSection,
+  ContactSection,
+} from "./index";
 
-export default function AboutPage() {
+export default function About() {
   const { scrollYProgress } = useScroll();
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 text-slate-800 dark:text-slate-200">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden -z-10">
+    <main className="min-h-screen rounded-2xl  text-dark dark:text-light pb-20">
+      {/* <div className="fixed  inset-0 overflow-hidden pointer-events-none -z-10">
         <motion.div
-          className="absolute -top-[30%] -right-[10%] w-[60%] h-[60%] rounded-full bg-gradient-to-br from-purple-200/20 to-indigo-300/20 dark:from-purple-900/20 dark:to-indigo-800/20 blur-3xl"
-          style={{ y: backgroundY }}
+          className="absolute top-0 right-0 w-[70%] h-[40%] rounded-full  blur-3xl"
+          style={{ y: useTransform(backgroundY) }}
         />
-        <motion.div
-          className="absolute -bottom-[30%] -left-[10%] w-[60%] h-[60%] rounded-full bg-gradient-to-tr from-pink-200/20 to-rose-300/20 dark:from-pink-900/20 dark:to-rose-800/20 blur-3xl"
-          style={{ y: useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]) }}
-        />
-      </div>
+      </div> */}
 
-      <div className="max-w-6xl mx-auto px-6 py-12 space-y-24">
-        {/* Hero Intro */}
-        <HeroSection />
+      {/* Document container */}
+      <div className="max-w-4xl mx-auto  shadow-lg  rounded-lg overflow-hidden my-10">
+        {/* Header section with subtle gradient */}
+        <div className=" px-8 py-12 border-b border-slate-200 dark:border-slate-700">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col md:flex-row items-center gap-6"
+          >
+            {/* <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="w-28 h-28 rounded-full overflow-hidden border-4 border-white dark:border-slate-600 shadow-lg"
+            >
+              <div className="w-full h-full  flex items-center justify-center">
+                <FaUserAlt className="text-white text-3xl" />
+              </div>
+            </motion.div> */}
 
-        {/* Journey Timeline */}
-        <JourneySection />
+            <div className="text-center md:text-left ">
+              <motion.h1
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="text-4xl md:text-5xl font-bold bg-lightGradient bg-clip-text text-transparent"
+              >
+                Dipanshu Rawat
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="text-xl text-dark dark:text-light mt-2"
+              >
+                Full-Stack Developer
+              </motion.p>
+            </div>
+          </motion.div>
+        </div>
 
-        {/* Tech Stack */}
-        <TechStackSection />
+        {/* Document content */}
+        <div className="px-8 py-10 space-y-12">
+          {/* About Me Section */}
+          <HeroSection />
 
-        {/* Open Source Contributions */}
-        <OpenSourceSection />
+          {/* Skills Section */}
+          <SkillsSection />
 
-        {/* Certifications & Education */}
-        <CredentialsSection />
+          {/* Open Source Section */}
+          <OpenSourceSection />
 
-        {/* Connect Section */}
-        <ConnectSection />
+          {/* Education & Certifications */}
+          <EducationSection />
+
+          {/* Contact Section */}
+          <ContactSection />
+        </div>
       </div>
     </main>
   );
 }
+
+// export default About;
