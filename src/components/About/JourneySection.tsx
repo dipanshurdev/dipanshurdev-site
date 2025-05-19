@@ -15,7 +15,7 @@ export default function JourneySection() {
       transition={{ duration: 0.6 }}
       className="relative"
     >
-      <div className="absolute left-1/2 h-full w-0.5 bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 transform -translate-x-1/2 z-0" />
+      <div className="absolute left-1/2 h-full w-0.5 bg-blueDark transform -translate-x-1/2 z-0" />
 
       <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16 bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">
         My Journey

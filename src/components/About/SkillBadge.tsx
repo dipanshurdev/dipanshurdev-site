@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import type { SkillsBadgeType } from "../../types";
 export default function SkillBadge({
   icon,
   label,
@@ -6,7 +7,7 @@ export default function SkillBadge({
   isInView,
   direction,
   index,
-}: any) {
+}: SkillsBadgeType) {
   const xOffset = direction === "right" ? 50 : -50;
   const rotateValue = index % 2 === 0 ? 5 : -5;
 

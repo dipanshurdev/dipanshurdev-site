@@ -1,3 +1,4 @@
+import type { SkillCategoryType, SkillsType } from "../../types";
 import { SkillBadge } from "./index";
 
 export default function SkillCategory({
@@ -5,14 +6,14 @@ export default function SkillCategory({
   skills,
   isInView,
   direction,
-}: any) {
+}: SkillCategoryType) {
   return (
     <div className="space-y-3">
       <h3 className="text-lg font-semibold text-dark dark:text-light">
         {title}
       </h3>
       <div className="flex flex-wrap gap-3">
-        {skills.map((skill: any, index: any) => (
+        {skills.map((skill: SkillsType, index: number) => (
           <SkillBadge
             key={skill.label}
             icon={skill.icon}

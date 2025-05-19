@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import type { SocialButtonType } from "../../types";
 
 export default function SocialButton({
   icon,
@@ -6,7 +7,7 @@ export default function SocialButton({
   href,
   delay,
   isInView,
-}: any) {
+}: SocialButtonType) {
   return (
     <motion.a
       href={href}

@@ -1,5 +1,4 @@
 import { motion, useInView } from "framer-motion";
-// import { FaUserAlt } from "react-icons/fa";
 import { Button } from "../ui/Button";
 import { useRef } from "react";
 
@@ -59,9 +58,16 @@ export default function () {
         className="flex flex-wrap gap-3 pt-2"
       >
         <Button variant="outline" className="outline-blue-800 outline-2 p-4 ">
-          View Projects
+          <a href="/projects">View Projects</a>
         </Button>
-        <Button variant="outline">Download Resume</Button>
+        <Button variant="outline">
+          <a
+            href="https://drive.google.com/file/d/11p8GTjhVOfYVL8Gb7wQ4CRJT18HLlsSM/view?usp=sharing"
+            target="_blank"
+          >
+            Resume
+          </a>
+        </Button>
       </motion.div>
     </motion.section>
   );
