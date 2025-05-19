@@ -85,3 +85,11 @@ EDUCATION
 Full-Stack Development Certification
 freeCodeCamp | Aug 2023 - Jan 2024Mastered MERN stack and REST APIs via hands-on projects.Frontend Development Certification
 freeCodeCamp | Feb 2023 - May 2023Built dynamic web apps with React.js and JavaScript.
+
+//-----------------------------------------------------------------------------------------------------YC---------------------------------------------------------
+Hi, I’m Dipanshu Rawat, a full stack developer with experience building scalable and user-centric applications using React, Next.js, Node.js, and MongoDB. I’ve led projects like AI-powered tools and interactive learning platforms, and I’m deeply passionate about creating products that genuinely solve problems.
+
+I’m excited about what you're building, your mission really resonates with me. I’d love to bring my experience and energy to your team and help move the product forward.
+
+Happy to chat anytime if you think there’s a potential fit!
+Dipanshu
