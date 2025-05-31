@@ -16,6 +16,7 @@ export default function Terminal() {
   const isInView = useInView(ref, { once: false, amount: 0.2 });
   const [activeCommand, setActiveCommand] = useState<number | null>(null);
   const [typedCommands, setTypedCommands] = useState<number[]>([]);
+  
   const [showCursor, setShowCursor] = useState(true);
 
   // Blink cursor effect

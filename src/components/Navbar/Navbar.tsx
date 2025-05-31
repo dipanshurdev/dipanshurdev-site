@@ -108,6 +108,9 @@ const Navbar = () => {
           <a href="/projects" className="underline flex items-center gap-2">
             projects
           </a>
+          <a href="/about-me" className="underline flex items-center gap-2">
+            about
+          </a>
           <ResumeLink />
         </div>
       )}
