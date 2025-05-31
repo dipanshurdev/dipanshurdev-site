@@ -1,4 +1,4 @@
-<footer class="w-full my-2 p-4 flex flex-row items-center justify-start">
+<footer class="w-full my-2 p-4 flex flex-row items-center justify-beteween">
   <div class="flex gap-8 cursor-pointer justify-center items-center">
     <span>
       <a
@@ -92,14 +92,20 @@
       </a>
     </span>
   </div>
-
-  <style>
-    .footer-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 40px;
-      width: 40px;
-    }
-  </style>
+  <div class="w-full text-center text-base font-semibold">
+    <span class="font-mono">©{new Date().getFullYear()}</span>
+  </div>
+  <div class="w-full text-end text-base font-semibold">
+    <span class="font-mono"> Designed and developed by Me.</span>
+  </div>
 </footer>
+
+<style>
+  .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+  }
+</style>
