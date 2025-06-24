@@ -25,12 +25,12 @@ export default function About() {
   return (
     <main className="min-h-screen text-dark dark:text-light pb-20 relative overflow-hidden">
       {/* Background Blob */}
-      {/* <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
+      {/* <di className="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
         <motion.div
           className="absolute bg-lightGradientMain top-0 right-0 w-[70%] h-[40%] rounded-full blur-3xl"
           style={{ y: backgroundY }}
         />
-      </div> */}
+      </di> */}
 
       {/* Main Content */}
       <div className="max-w-4xl mx-auto shadow-lg rounded-lg overflow-hidden my-10 bg-white/80 dark:bg-black/50 backdrop-blur">
