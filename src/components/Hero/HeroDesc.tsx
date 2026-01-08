@@ -25,41 +25,15 @@ const HeroDesc = () => {
           className="hidden md:inline-block"
           style={{ marginRight: `${widthPx}px` }}
         ></span>
-        a Fullstack Developer. I mostly like doing Frontend with{" "}
-        <LinkPopup
-          url="https://socialgram-me.vercel.app"
-          image="socialgram.png"
-          icon="reactjs"
-        >
-          React.js
-        </LinkPopup>
-        ,{" "}
-        <LinkPopup
-          url="https://devpath.netlify.app"
-          image="devpath.png"
-          icon="nextjs"
-        >
-          Next.js
-        </LinkPopup>
-        , and more. I build cool projects and contribute to open-source
-        software. When I'm not coding, you’ll find me exploring the latest tech
-        trends on{" "}
-        <LinkPopup
-          url="https://twitter.com/dipanshurdev"
-          image="twitter.png"
-          icon="bird"
-        >
-          Twitter
-        </LinkPopup>{" "}
-        and{" "}
-        <LinkPopup
-          url="https://linkedin.com/in/dipanshurdev"
-          image="linkedIn.png"
-          icon="linkedin-man"
-        >
-          LinkedIn
-        </LinkPopup>{" "}
-        with <span className="inline">Tea ☕</span>.
+        a Software Developer. I build fast, scalable, <br />
+        <span className="text-blue-600 dark:text-blue-500 font-bold">
+            user-focused applications
+        </span>.
+        <br />
+        <br />
+        <span className="text-base sm:text-lg text-gray-600 dark:text-gray-400">
+            With 2+ years of experience in React, Next.js, and scaling products like <LinkPopup url="#" image="claritel.png" icon="briefcase">Claritel.ai</LinkPopup> and <LinkPopup url="#" image="hydrobank.png" icon="briefcase">HydroBank</LinkPopup>.
+        </span>
       </div>
     </div>
   );

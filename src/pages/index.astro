@@ -2,11 +2,22 @@
 import SuperHero from "../components/Hero/SuperHero.astro";
 import ParticlesRotate from "../layouts/animated-bg/ParticlesRotate";
 import MainLayout from "../layouts/MainLayout.astro";
+import Experience from "../components/Experience";
+import Projects from "../components/Projects";
+import AboutMe from "../components/AboutMe";
+import Skills from "../components/Skills";
 
 // import "@fontsource-variable/dosis";
 ---
 
-<MainLayout title="dipanshurdev">
+<MainLayout title="dipanshurdev | Full Stack Developer">
   <ParticlesRotate client:load />
-  <SuperHero />
+
+  <div class="space-y-24 pb-24">
+    <SuperHero />
+    <Skills client:visible />
+    <Experience client:visible />
+    <Projects client:visible />
+    <AboutMe client:visible />
+  </div>
 </MainLayout>
