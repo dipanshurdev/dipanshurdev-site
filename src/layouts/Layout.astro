@@ -29,6 +29,22 @@ const { title } = Astro.props;
 </html>
 
 <style is:global>
+  :root {
+    --primary: 37 99 235;
+    --secondary: 79 70 229;
+    --background: 255 255 255;
+    --surface: 244 244 245;
+    --text-muted: 82 82 91;
+  }
+
+  .dark {
+    --primary: 96 165 250;
+    --secondary: 129 140 248;
+    --background: 9 9 11;
+    --surface: 24 24 27;
+    --text-muted: 161 161 170;
+  }
+
   body {
     scrollbar-width: thin;
     overflow-x: hidden;

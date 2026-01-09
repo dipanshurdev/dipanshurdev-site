@@ -34,19 +34,19 @@ const DarkModeToggle: React.FC = () => {
     <button
       type="button"
       onClick={toggleTheme}
-      className="hover:ring-4 p-2 rounded-full duration-500 ease-in-out hover:ring-blue-700  transition-all"
+      className="p-2 rounded-full transition-all duration-300 hover:bg-black/5 dark:hover:bg-white/10 hover:ring-2 hover:ring-primary/50"
     >
       {theme === "dark" ? (
         <img
-          title="😴 Mode"
-          className="w-5 h-5 max-sm:w-10"
+          title="Switch to Light Mode"
+          className="w-5 h-5"
           src={Moon.src}
           alt="Dark Mode"
         />
       ) : (
         <img
-          title="😎 Mode"
-          className="w-5 h-5 max-sm:w-10"
+          title="Switch to Dark Mode"
+          className="w-5 h-5"
           src={Sun.src}
           alt="Light Mode"
         />

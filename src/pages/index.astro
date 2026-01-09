@@ -6,6 +6,7 @@ import Experience from "../components/Experience";
 import Projects from "../components/Projects";
 import AboutMe from "../components/AboutMe";
 import Skills from "../components/Skills";
+import Contact from "../components/Contact";
 
 // import "@fontsource-variable/dosis";
 ---
@@ -13,11 +14,12 @@ import Skills from "../components/Skills";
 <MainLayout title="dipanshurdev | Full Stack Developer">
   <ParticlesRotate client:load />
 
-  <div class="space-y-24 pb-24">
+  <div class="w-full space-y-24 pb-24">
     <SuperHero />
     <Skills client:visible />
     <Experience client:visible />
     <Projects client:visible />
     <AboutMe client:visible />
+    <Contact client:visible />
   </div>
 </MainLayout>

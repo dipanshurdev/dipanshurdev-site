@@ -215,6 +215,13 @@ export default {
       fontFamily: {
         // sansPro: "Source Sans Pro",
       },
+      colors: {
+        primary: "rgb(var(--primary) / <alpha-value>)",
+        secondary: "rgb(var(--secondary) / <alpha-value>)",
+        background: "rgb(var(--background) / <alpha-value>)",
+        surface: "rgb(var(--surface) / <alpha-value>)",
+        "text-muted": "rgb(var(--text-muted) / <alpha-value>)",
+      },
     },
 
     backgroundImage: {

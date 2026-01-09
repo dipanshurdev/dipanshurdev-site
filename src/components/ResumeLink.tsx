@@ -2,7 +2,7 @@ const ResumeLink = () => (
   <a
     href="https://drive.google.com/file/d/1WZKMQX_BJSzERQYmbFWbHksj58lEf7Sa/view?usp=sharing"
     target="_blank"
-    className="relative transition duration-300  group flex items-center gap-1 transform-none no-underline before:content-[''] before:bg-blue-700 before:w-0 before:h-[4px] before:absolute before:bottom-0 before:left-0 before:top-[33px] before:invisible before:transition-all before:duration-300 hover:before:w-full hover:before:visible"
+    className="relative transition duration-300  group flex items-center gap-1 transform-none no-underline before:content-[''] before:bg-primary before:w-0 before:h-[4px] before:absolute before:bottom-0 before:left-0 before:top-[33px] before:invisible before:transition-all before:duration-300 hover:before:w-full hover:before:visible"
   >
     <span className="">Resume</span>
     {/* <div className="flex justify-center items-center w-12 bg-gray-200 rounded-r-md dark:bg-gray-800">

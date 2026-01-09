@@ -32,7 +32,7 @@ const HeroDesc = () => {
         <br />
         <br />
         <span className="text-base sm:text-lg text-gray-600 dark:text-gray-400">
-            With 2+ years of experience in React, Next.js, and scaling products like <LinkPopup url="#" image="claritel.png" icon="briefcase">Claritel.ai</LinkPopup> and <LinkPopup url="#" image="hydrobank.png" icon="briefcase">HydroBank</LinkPopup>.
+            With 2+ years of experience in React, Next.js, and scaling products like <LinkPopup url="#" image="devpath.png" icon="externalLink">Claritel.ai</LinkPopup> and <LinkPopup url="#" image="socialgram.png" icon="externalLink">HydroBank</LinkPopup>.
         </span>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { FiBriefcase, FiArrowRight, FiSend } from "react-icons/fi";
 
 const Hero = () => {
   return (
@@ -24,7 +25,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="max-w-4xl"
         >
-          <h1 className="font-display text-5xl font-bold tracking-tight text-white sm:text-7xl">
+          <h1 className="font-display text-5xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-7xl">
             Building digital
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent">
               experiences that matter.
@@ -50,14 +51,17 @@ const Hero = () => {
         >
           <a
             href="#projects"
-            className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-3 text-base font-medium text-black transition-transform hover:scale-105"
+            className="group inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 dark:bg-white px-8 py-3 text-base font-semibold text-white dark:text-black transition-all hover:scale-105 active:scale-95 shadow-lg shadow-black/10"
           >
+            <FiBriefcase className="w-5 h-5" />
             View Projects
+            <FiArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center justify-center rounded-lg border border-white/10 bg-surface px-8 py-3 text-base font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/10"
+            className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 dark:border-white/10 bg-white/50 dark:bg-surface px-8 py-3 text-base font-semibold text-slate-900 dark:text-white backdrop-blur-sm transition-all hover:bg-slate-50 dark:hover:bg-white/10 active:scale-95 shadow-sm"
           >
+            <FiSend className="w-5 h-5" />
             Contact Me
           </a>
         </motion.div>
@@ -70,8 +74,18 @@ const Hero = () => {
         transition={{ delay: 1, duration: 1 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2"
       >
-        <div className="h-10 w-6 rounded-full border-2 border-white/20 p-1">
-          <div className="h-2 w-full rounded-full bg-white/50 animate-bounce"></div>
+        <div className="h-10 w-6 rounded-full border-2 border-white/20 p-1 flex justify-center">
+          <motion.div 
+            animate={{ 
+                y: [0, 12, 0],
+            }}
+            transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                ease: "easeInOut"
+            }}
+            className="h-2 w-1.5 rounded-full bg-primary"
+          />
         </div>
       </motion.div>
     </section>
