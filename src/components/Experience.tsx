@@ -6,7 +6,7 @@ const experiences = [
   {
     company: "Claritel.ai",
     role: "Software Development Engineer Intern",
-    period: "Oct 2025 – Present",
+    period: "Oct 2025 – Jan 2026",
     description: "Designed and developed a complete email-based ticketing platform. Built backend services using FastAPI/Python and integrated with a React/TypeScript frontend.",
     tech: ["FastAPI", "Python", "PostgreSQL", "React", "TypeScript"]
   },
