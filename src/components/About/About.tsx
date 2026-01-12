@@ -7,7 +7,6 @@ import {
   SkillsSection,
   OpenSourceSection,
   EducationSection,
-  ContactSection,
 } from "./index";
 import Terminal from "./Terminal";
 

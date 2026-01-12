@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { 
   FaReact, 
@@ -7,7 +6,6 @@ import {
   FaAws, 
   FaGitAlt, 
   FaFigma,
-  FaArrowRight
 } from "react-icons/fa6";
 import { 
   SiTypescript, 

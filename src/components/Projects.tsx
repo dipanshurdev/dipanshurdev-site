@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import projectData from "../data/projects.json";
 import { FiGithub, FiExternalLink } from "react-icons/fi";

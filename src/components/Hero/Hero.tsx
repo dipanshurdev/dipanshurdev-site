@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { FiBriefcase, FiArrowRight, FiSend } from "react-icons/fi";
 
