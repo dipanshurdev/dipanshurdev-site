@@ -29,7 +29,7 @@ const Contact = () => {
           <motion.a
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
-            href="mailto:contact@dipanshurdev.com" 
+            href="mailto:dipanshurdev@gmail.com" 
             className="inline-flex items-center justify-center gap-3 rounded-2xl bg-primary px-10 py-5 text-lg font-bold text-white shadow-xl shadow-primary/25 transition-all hover:bg-primary/90 hover:shadow-primary/40 ring-1 ring-white/10"
           >
             <FiMail className="w-6 h-6" />
