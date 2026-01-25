@@ -1,6 +1,6 @@
 const ResumeLink = () => (
   <a
-    href="https://drive.google.com/file/d/1WZKMQX_BJSzERQYmbFWbHksj58lEf7Sa/view?usp=sharing"
+    href="https://drive.google.com/file/d/14yPmHMMn7UI9OPgp5uyPuISu0e6sf2aC/view?usp=sharing"
     target="_blank"
     className="relative transition duration-300  group flex items-center gap-1 transform-none no-underline before:content-[''] before:bg-primary before:w-0 before:h-[4px] before:absolute before:bottom-0 before:left-0 before:top-[33px] before:invisible before:transition-all before:duration-300 hover:before:w-full hover:before:visible"
   >
