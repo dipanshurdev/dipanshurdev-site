@@ -5,10 +5,10 @@ import projects from "../data/projects.json";
 import Project from "../components/Project.astro";
 ---
 
-<MainLayout title="Projects">
-  <main class="w-full h-full flex items-start justify-center flex-col px-4">
+<MainLayout title="Projects | dipanshurdev">
+  <main class="w-full min-h-screen flex flex-col px-4 sm:px-6 pt-20 sm:pt-24 pb-12">
     <Heading text="Projects" />
-    <section class="projects-grid">
+    <section class="projects-grid" aria-label="Project list">
       {projects.map((project) => <Project {...project} />)}
     </section>
   </main>
@@ -17,10 +17,21 @@ import Project from "../components/Project.astro";
 <style>
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem 0rem;
-    margin-top: 2rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    margin-top: 1rem;
     width: 100%;
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (min-width: 640px) {
+    .projects-grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem 0;
+      margin-top: 2rem;
+    }
   }
 </style>
