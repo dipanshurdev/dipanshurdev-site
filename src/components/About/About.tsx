@@ -32,8 +32,8 @@ export default function About() {
       </di> */}
 
       {/* Main Content */}
-      <div className="max-w-4xl mx-auto shadow-lg rounded-lg overflow-hidden my-10 bg-white/80 dark:bg-black/50 backdrop-blur">
-        <div className="px-8 py-12 border-b border-slate-200 dark:border-slate-700">
+      <div className="max-w-4xl mx-auto shadow-lg rounded-lg overflow-hidden my-6 sm:my-10 bg-white/80 dark:bg-black/50 backdrop-blur">
+        <div className="px-6 sm:px-8 py-8 sm:py-12 border-b border-slate-200 dark:border-slate-700">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -53,15 +53,15 @@ export default function About() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="text-xl mt-2"
+                className="text-lg sm:text-xl mt-2 text-slate-600 dark:text-slate-400"
               >
-                Full-Stack Developer | Open Source Contributor
+                Software Engineer | Full Stack Developer | Open Source Contributor
               </motion.p>
             </div>
           </motion.div>
         </div>
 
-        <div className="px-8 py-10 space-y-12">
+        <div className="px-4 sm:px-8 py-8 sm:py-10 space-y-10 sm:space-y-12">
           <HeroSection />
           <SkillsSection />
           <OpenSourceSection />

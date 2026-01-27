@@ -81,7 +81,7 @@ const HeroDesc = () => {
         </div>
         
         <div className="mt-2 text-zinc-900 dark:text-white">
-            I build fast, scalable,{" "}
+            I build production-grade, scalable,{" "}
             <span className="relative inline-block group">
                 <span className="relative z-10 text-primary italic pr-2">user-focused applications</span>
                 <motion.span 
@@ -98,11 +98,11 @@ const HeroDesc = () => {
         variants={itemVariants}
         className="mt-12 sm:mt-16"
       >
-        <p className="text-lg sm:text-2xl text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-3xl font-medium border-l-4 border-primary/30 pl-8">
+        <p className="text-lg sm:text-2xl text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-3xl font-medium border-l-4 border-primary/30 pl-6 sm:pl-8">
             With 2+ years of experience in React, Next.js, and scaling products like{" "}
-            <LinkPopup url="https://devpath.netlify.app" image="devpath.png" icon="nextjs">DevPath</LinkPopup>{" "}
+            <LinkPopup url="https://devpath.netlify.app" image="devpath.png" icon="reactjs">DevPath</LinkPopup>{" "}
             and{" "}
-            <LinkPopup url="#" image="socialgram.png" icon="reactjs">CodePal</LinkPopup>.
+            <LinkPopup url="https://github.com/dipanshurdev/StudyOS" image="studyos.png" icon="nextjs">StudyOS</LinkPopup>.
         </p>
       </motion.div>
     </motion.div>

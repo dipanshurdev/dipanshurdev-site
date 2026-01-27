@@ -1,99 +1,110 @@
-
-
-[ {
+[
+  {
+    "name": "StudyOS",
+    "url": "https://github.com/dipanshurdev/StudyOS",
+    "githubUrl": "https://github.com/dipanshurdev/StudyOS",
+    "image": "/assets/images/studyos.png",
+    "desc": "AI-powered study platform with automated note analysis and MCQ generation. Real-time collaborative study sessions. Built with Next.js, TypeScript, Supabase, and HuggingFace — 40% faster page loads, 25% higher learner engagement.",
+    "tech": ["Nextjs", "TypeScript", "Supabase", "AI", "HuggingFace"],
+    "type": "project"
+  },
+  {
     "name": "DevPath",
     "url": "https://devpath.netlify.app",
-    "githubUrl":"https://github.com/dipanshurdev/devpath",
+    "githubUrl": "https://github.com/dipanshurdev/devpath",
     "image": "/assets/images/devpath.png",
-    "desc": "DevPath is an interactive roadmap platform for developers, offering structured learning paths, resources, and guides to master technical skills.",
-    "tech": ["nextjs", "appwrite", "typescript", "tailwindcss"],
-    "type":"project"
-  
-},
-
+    "desc": "Interactive roadmap-based learning platform for developers. Categorized resource library and structured learning paths — 30% user retention and 25% better content discoverability.",
+    "tech": ["Nextjs", "appwrite", "TypeScript", "TailwindCSS"],
+    "type": "project"
+  },
+  {
+    "name": "Email Ticketing Platform",
+    "url": "#",
+    "githubUrl": "#",
+    "image": "/assets/images/ticketshub.png",
+    "desc": "Full-featured email-based customer support ticketing system. REST APIs and DB schemas for high-volume workflows — 40% faster response turnaround, 50% improved system reliability.",
+    "tech": ["TypeScript", "API", "Express", "MongoDB"],
+    "type": "project"
+  },
   {
     "name": "SocialGram-me",
     "url": "https://socialgram-me.vercel.app",
-    "githubUrl":"https://github.com/dipanshurdev/socialgram-me",
+    "githubUrl": "https://github.com/dipanshurdev/socialgram-me",
     "image": "/assets/images/socialgram.png",
-    "desc": "A social Media Image sharing application. Powered by Reactjs, Tailwindcss and React Querry for Frontend and Appwrite for Backend.",
-    "tech": ["reactjs", "react-query", "appwrite", "tailwindcss"],
-    "type":"project"
-  
-},
-
-{
+    "desc": "Social media image-sharing app with React, Tailwind, React Query, and Appwrite backend.",
+    "tech": ["Reactjs", "react-query", "appwrite", "TailwindCSS"],
+    "type": "project"
+  },
+  {
     "name": "Pictures-me",
     "url": "https://pictures-me.netlify.app",
-    "githubUrl":"https://github.com/dipanshurdev/pictures-me",
+    "githubUrl": "https://github.com/dipanshurdev/pictures-me",
     "image": "/assets/images/pictures-me.png",
-    "desc": "Pictures is a full-stack social media app, where you can share your pictures to everyone. It's built with React js and backend is powered by Sanity.io. So go and share your pictures.",
-    "tech": ["reactjs", "sanity", "typescript", "tailwindcss"],
-      "type":"project"
-},
-{
+    "desc": "Full-stack social media app for sharing pictures. React and Sanity.io backend.",
+    "tech": ["Reactjs", "Sanity", "TypeScript", "TailwindCSS"],
+    "type": "project"
+  },
+  {
     "name": "Query-me",
     "url": "https://querry-me.netlify.app",
-    "githubUrl":"https://github.com/dipanshurdev/querry-me",
+    "githubUrl": "https://github.com/dipanshurdev/querry-me",
     "image": "/assets/images/query-me.png",
-    "desc": "Querry-Me is a search app built with React.js and the Wikipedia Search API. It allows users to enter a query and quickly fetch relevant results from Wikipedia in real time. Simple and efficient for accessing information.",
-    "tech": ["reactjs", "wikipedia", "search-app", "api"],
-      "type":"project"
-},
-{
+    "desc": "Wikipedia search app built with React.js. Real-time results and simple, efficient UX.",
+    "tech": ["Reactjs", "wikipedia", "search-app", "API"],
+    "type": "project"
+  },
+  {
     "name": "Prompting",
     "url": "https://prompting-ai.vercel.app",
-    "githubUrl":"https://github.com/dipanshurdev/prompting",
+    "githubUrl": "https://github.com/dipanshurdev/prompting",
     "image": "/assets/images/prompting.png",
-    "desc": "Prompting is an open-source AI prompt based tool for modren world to discover, create and share creative prompts.",
-    "tech": ["nextjs", "mongodb", "tailwindcss"],
-      "type":"project"
-},
-{
+    "desc": "Open-source AI prompt tool to discover, create, and share creative prompts.",
+    "tech": ["Nextjs", "MongoDB", "TailwindCSS"],
+    "type": "project"
+  },
+  {
     "name": "Sumzer",
     "url": "https://sumzer.netlify.app/",
-    "githubUrl":"https://github.com/dipanshurdev/Sumzer-ai",
+    "githubUrl": "https://github.com/dipanshurdev/Sumzer-ai",
     "image": "/assets/images/sumzer.png",
-    "desc": "Simplify your reading with Summize, an open-source article summarizer that transforms lengthy articles into clear and concise summaries",
-    "tech": ["ai", "reactjs", "redux", "api"],
-      "type":"project"
-},
-{
+    "desc": "Open-source article summarizer that turns long articles into clear, concise summaries.",
+    "tech": ["AI", "Reactjs", "Redux", "API"],
+    "type": "project"
+  },
+  {
     "name": "Sorry Bubu",
     "url": "https://bubu-please.netlify.app/",
-    "githubUrl":"https://github.com/dipanshurdev/bubu-dudu",
+    "githubUrl": "https://github.com/dipanshurdev/bubu-dudu",
     "image": "/assets/images/bubududu.png",
-    "desc": "Dudu messed up😢, and it's time to say sorry! Will you forgive him?",
-    "tech": ["reactjs", "javascript"],
-      "type":"project"
-},
-{
+    "desc": "A playful “say sorry” micro-app — Dudu messed up. Will you forgive him?",
+    "tech": ["Reactjs", "JavaScript"],
+    "type": "project"
+  },
+  {
     "name": "WebDevTools",
     "url": "https://wdt.adambashaahmednaji.com/",
-    "githubUrl":"",
+    "githubUrl": "",
     "image": "/assets/images/wdt.png",
-    "desc": "<span class='text-blue-500'> Collaborator </span> at webdevtools, Actively contributed to the open-source project webdevtools, a comprehensive toolkit for web developers.",
-    "tech": ["nextjs", "opensource", "tailwindcss"],
-      "type":"collaborator"
-},
-{
+    "desc": "Collaborator on webdevtools — open-source toolkit for web developers. Contributed features and UX improvements.",
+    "tech": ["Nextjs", "OpenSource", "TailwindCSS"],
+    "type": "collaborator"
+  },
+  {
     "name": "Appwrite Website",
     "url": "https://appwrite.io",
-    "githubUrl":"",
+    "githubUrl": "",
     "image": "/assets/images/appwrite-website.png",
-    "desc": "<span class='text-blue-500'> Contributed </span> to the open-source BaaS platform Appwrite, focusing on smaller yet impactful improvements such as bug fixes and feature enhancements.",
-    "tech": ["appwrite", "opensource", "svelte"],
-      "type":"contributor"
-    
-},
-{
+    "desc": "Contributed to Appwrite (45.2k★): UI fixes, bug triaging, and documentation improvements.",
+    "tech": ["appwrite", "OpenSource", "Svelte"],
+    "type": "contributor"
+  },
+  {
     "name": "RepoRater",
     "url": "https://repo-rater.eddiehub.io/",
-    "githubUrl":"",
+    "githubUrl": "",
     "image": "/assets/images/reporater.png",
-    "desc": "<p><span class='text-blue-500'> Contributed </span>to repo-rater fixing bugs, improving UI, and adding features to enhance user experience and functionality. Addressed errors and refined the interface for a smoother, more intuitive interaction.</p>",
-    "tech": ["nextjs", "opensource", "tailwindcss"],
-      "type":"contributor"
-
-}
+    "desc": "Contributed to RepoRater: bug fixes, UI improvements, and features for better UX.",
+    "tech": ["Nextjs", "OpenSource", "TailwindCSS"],
+    "type": "contributor"
+  }
 ]

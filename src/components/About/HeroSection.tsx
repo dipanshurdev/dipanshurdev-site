@@ -2,8 +2,8 @@ import { motion, useInView } from "framer-motion";
 import { Button } from "../ui/Button";
 import { useRef } from "react";
 
-export default function () {
-  const ref = useRef(null);
+export default function HeroSection() {
+  const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: false, amount: 0.2 });
 
   return (
@@ -20,8 +20,8 @@ export default function () {
         transition={{ duration: 0.5 }}
         className="flex items-center gap-2"
       >
-        <div className="h-px bg-dark dark:bg-light w-6"></div>
-        <h2 className="text-2xl font-bold text-dark dark:text-light">
+        <div className="h-px bg-dark dark:bg-light w-6" />
+        <h2 className="text-xl sm:text-2xl font-bold text-dark dark:text-light">
           About Me
         </h2>
       </motion.div>
@@ -30,25 +30,25 @@ export default function () {
         initial={{ y: 20, opacity: 0 }}
         animate={isInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="text-dark dark:text-light leading-relaxed"
+        className="text-dark dark:text-light leading-relaxed text-sm sm:text-base"
       >
-        I'm a self-taught full-stack developer passionate about building tools
-        that solve real-world problems. Over the last 2+ years, I've shipped
-        projects using{" "}
-        <strong>React.js, Next.js, Supabase, Prisma, Tailwind</strong> and
-        contributed to global open-source communities.
+        Software Developer with 2+ years of experience building production-grade
+        MVPs and scalable web applications across fintech, AI, automation, and
+        ed-tech. Proficient in React.js, Next.js, TypeScript, Node.js, and
+        backend API development. Experienced in collaborating with remote teams
+        and founders to translate product ideas into reliable, user-focused
+        solutions.
       </motion.p>
 
       <motion.p
         initial={{ y: 20, opacity: 0 }}
         animate={isInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="text-dark dark:text-light leading-relaxed"
+        className="text-dark dark:text-light leading-relaxed text-sm sm:text-base"
       >
-        My journey in web development began with a curiosity about how websites
-        work and quickly evolved into a passion for creating intuitive,
-        accessible, and performant web applications. I enjoy the challenge of
-        learning new technologies and applying them to solve complex problems.
+        I focus on clean architecture, REST APIs, and system design. Active in
+        open source (Appwrite, EddieHub, Modernizr, OpenCut) and a 4× Hackathon
+        winner.
       </motion.p>
 
       <motion.div
@@ -57,13 +57,14 @@ export default function () {
         transition={{ duration: 0.5, delay: 0.4 }}
         className="flex flex-wrap gap-3 pt-2"
       >
-        <Button variant="outline" className="outline-blue-800 outline-2 p-4 ">
+        <Button variant="outline" className="outline-blue-800 outline-2 p-3 sm:p-4">
           <a href="/projects">View Projects</a>
         </Button>
-        <Button variant="outline">
+        <Button variant="outline" className="p-3 sm:p-4">
           <a
             href="https://drive.google.com/file/d/11p8GTjhVOfYVL8Gb7wQ4CRJT18HLlsSM/view?usp=sharing"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Resume
           </a>
@@ -72,5 +73,3 @@ export default function () {
     </motion.section>
   );
 }
-
-// export default HeroSection;

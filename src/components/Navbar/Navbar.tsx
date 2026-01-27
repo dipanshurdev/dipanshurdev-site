@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import DarkModeToggle from "../DarkMode";
 import ResumeLink from "../ResumeLink";
-import { BiUser, BiBriefcase, BiCodeAlt, BiMessageSquareDetail } from "react-icons/bi";
+import { BiUser, BiBriefcase, BiCodeAlt, BiMessageSquareDetail, BiChip } from "react-icons/bi";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -11,9 +11,9 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
-      
+
       // Update active hash based on scroll position
-      const sections = links.map(link => link.href.substring(1));
+      const sections = links.map((link) => link.href.substring(1));
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -30,9 +30,10 @@ const Navbar = () => {
   }, []);
 
   const links = [
-    { name: "About", href: "#about", icon: BiUser },
+    { name: "Skills", href: "#skills", icon: BiChip },
     { name: "Experience", href: "#experience", icon: BiBriefcase },
     { name: "Projects", href: "#projects", icon: BiCodeAlt },
+    { name: "About", href: "#about", icon: BiUser },
     { name: "Contact", href: "#contact", icon: BiMessageSquareDetail },
   ];
 
