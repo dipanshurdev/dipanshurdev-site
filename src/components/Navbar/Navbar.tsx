@@ -52,9 +52,9 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <a href="/" className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent hover:opacity-80 transition-opacity">
-                dipanshurdev
-              </a>
+              <img src="/assets/logo.png" alt="Logo" className="w-10 h-10 rounded-full" />
+               
+              
             </div>
 
             {/* Desktop Menu */}
@@ -95,13 +95,44 @@ const Navbar = () => {
       </motion.nav>
 
       {/* Mobile Bottom Dock Navigation */}
-      <div className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-full px-4 max-w-[350px]">
+      <div className="md:hidden fixed bottom-6 left-0 right-0 z-50 px-4 flex justify-center">
         <motion.div 
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.5, type: "spring", stiffness: 260, damping: 20 }}
-            className="flex items-center justify-between px-6 py-4 bg-white/80 dark:bg-[#121212]/80 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl shadow-2xl shadow-black/10 ring-1 ring-black/5"
+            transition={{ delay: 0.2, type: "spring", stiffness: 260, damping: 20 }}
+            className="flex items-center justify-around w-full max-w-[400px] px-2 py-3 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-2xl border border-white/20 dark:border-white/10 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] ring-1 ring-black/5"
         >
+            {/* Added Home Link to dock */}
+            <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                  setActiveHash("");
+                }}
+                className="group relative flex flex-col items-center gap-1 flex-1 py-1"
+            >
+                <div className={`p-1.5 rounded-xl transition-all duration-300 ${
+                    activeHash === "" 
+                        ? "text-primary scale-110" 
+                        : "text-zinc-500 dark:text-zinc-400 group-hover:text-primary"
+                }`}>
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                </div>
+                <span className={`text-[10px] font-medium transition-colors ${
+                  activeHash === "" ? "text-primary" : "text-zinc-500 dark:text-zinc-400"
+                }`}>Home</span>
+                {activeHash === "" && (
+                    <motion.span 
+                        layoutId="nav-pill"
+                        className="absolute inset-0 bg-primary/5 dark:bg-primary/10 rounded-2xl -z-10"
+                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                    />
+                )}
+            </a>
+
             {links.map((link) => {
                 const Icon = link.icon;
                 const isActive = activeHash === link.href;
@@ -111,33 +142,27 @@ const Navbar = () => {
                         key={link.name}
                         href={link.href}
                         onClick={() => setActiveHash(link.href)}
-                        className="group relative flex flex-col items-center gap-1"
+                        className="group relative flex flex-col items-center gap-1 flex-1 py-1"
                     >
-                        <motion.div
-                            whileHover={{ scale: 1.2, y: -4 }}
-                            whileTap={{ scale: 0.9 }}
-                            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                            className={`p-2.5 rounded-xl transition-all duration-300 ${
-                                isActive 
-                                    ? "bg-primary/10 text-primary shadow-[0_0_15px_rgba(var(--primary-rgb),0.3)]" 
-                                    : "text-zinc-500 dark:text-zinc-400 hover:text-primary hover:bg-black/5 dark:hover:bg-white/5"
-                            }`}
-                        >
+                        <div className={`p-1.5 rounded-xl transition-all duration-300 ${
+                            isActive 
+                                ? "text-primary scale-110" 
+                                : "text-zinc-500 dark:text-zinc-400 group-hover:text-primary"
+                        }`}>
                             <Icon className="w-6 h-6" />
-                        </motion.div>
+                        </div>
                         
-                        {/* Active Indicator Dot */}
+                        <span className={`text-[10px] font-medium transition-colors ${
+                          isActive ? "text-primary" : "text-zinc-500 dark:text-zinc-400"
+                        }`}>{link.name}</span>
+
                         {isActive && (
                             <motion.span 
-                                layoutId="nav-dot"
-                                className="absolute -bottom-2 w-1 h-1 bg-primary rounded-full"
+                                layoutId="nav-pill"
+                                className="absolute inset-0 bg-primary/5 dark:bg-primary/10 rounded-2xl -z-10"
+                                transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                             />
                         )}
-
-                       {/* Tooltip for Mobile - Optional/Subtle */}
-                       {/* <span className="absolute -top-8 bg-black text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                            {link.name}
-                       </span> */}
                     </a>
                 );
             })}
