@@ -53,8 +53,8 @@ const HeroDesc = () => {
       className="w-full text-zinc-900 dark:text-zinc-100 max-w-5xl px-4 sm:px-6 md:px-8 mx-auto relative z-10"
     >
       <motion.div variants={itemVariants}>
-        <p className="text-base sm:text-lg lg:text-xl mb-4 font-semibold tracking-wide text-primary/80 dark:text-primary uppercase flex items-center gap-3">
-            <span className="w-12 h-[2px] bg-primary/30 hidden sm:block"></span>
+        <p className="text-sm sm:text-base lg:text-lg font-semibold tracking-wide text-primary/80 dark:text-primary uppercase flex items-center gap-3 mb-2">
+            <span className="w-12 h-[1px] bg-primary/30 hidden sm:block"></span>
             Hey there <motion.span 
               animate={{ rotate: [0, 20, 0] }} 
               transition={{ repeat: Infinity, duration: 2, repeatDelay: 1 }}
@@ -69,10 +69,9 @@ const HeroDesc = () => {
 
       <motion.div 
         variants={itemVariants}
-        className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] mt-6 tracking-tight overflow-visible"
+        className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] mt-6 tracking-tight"
       >
         <div className="flex flex-wrap items-baseline gap-x-4">
-            {/* Indent only on desktop to align with the start of the name */}
             <span
               className="hidden md:inline-block shrink-0 transition-all duration-300"
               style={{ width: `${widthPx}px` }}
@@ -88,7 +87,7 @@ const HeroDesc = () => {
                     initial={{ width: 0 }}
                     animate={{ width: "100%" }}
                     transition={{ delay: 1.5, duration: 0.8 }}
-                    className="absolute bottom-1 sm:bottom-2 left-0 h-3 sm:h-5 bg-primary/15 dark:bg-primary/25 -z-0 rounded-sm skew-x-[-12deg]"
+                    className="absolute bottom-1 sm:bottom-2 left-0 h-3 sm:h-5 bg-primary/10 dark:bg-primary/20 -z-0 rounded-sm skew-x-[-12deg]"
                 />
             </span>.
         </div>

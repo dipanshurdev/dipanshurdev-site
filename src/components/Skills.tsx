@@ -66,30 +66,42 @@ const Skills = () => {
         </h2>
       </motion.div>
 
-      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+      <div className="relative flex w-full flex-col gap-6 items-center justify-center overflow-hidden">
+        {/* Gradient Slats for depth */}
         <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 sm:w-1/3 bg-gradient-to-r from-[rgb(var(--background))] to-transparent z-10" />
         <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 sm:w-1/3 bg-gradient-to-l from-[rgb(var(--background))] to-transparent z-10" />
 
-        <div className="flex w-full overflow-hidden py-3 sm:py-4">
+        {/* First Row: Moving Left */}
+        <div className="flex w-full overflow-hidden py-2">
           <motion.div
-            className="flex min-w-full shrink-0 gap-3 sm:gap-4 px-4"
+            className="flex min-w-full shrink-0 gap-4 sm:gap-6 px-4"
             animate={{ x: "-100%" }}
             transition={{
               repeat: Infinity,
               ease: "linear",
-              duration: 45,
+              duration: 40,
             }}
           >
-            {[...skills, ...skills, ...skills].map((skill, index) => (
-              <div
-                key={`${skill.name}-${index}`}
-                className="shrink-0 flex items-center gap-2 sm:gap-3 rounded-full border border-slate-200 dark:border-white/10 bg-white dark:bg-surface px-4 py-2.5 sm:px-6 sm:py-3 text-xs sm:text-sm font-medium text-slate-700 dark:text-white backdrop-blur-sm transition-all hover:border-primary/50 hover:text-primary shadow-sm dark:shadow-none group"
-              >
-                <skill.icon
-                  className={`text-lg sm:text-xl transition-colors ${skill.color} group-hover:text-primary`}
-                />
-                <span>{skill.name}</span>
-              </div>
+            {[...skills, ...skills].map((skill, index) => (
+              <SkillTag key={`${skill.name}-1-${index}`} skill={skill} />
+            ))}
+          </motion.div>
+        </div>
+
+        {/* Second Row: Moving Right */}
+        <div className="flex w-full overflow-hidden py-2">
+          <motion.div
+            className="flex min-w-full shrink-0 gap-4 sm:gap-6 px-4"
+            animate={{ x: "0%" }}
+            initial={{ x: "-100%" }}
+            transition={{
+              repeat: Infinity,
+              ease: "linear",
+              duration: 50,
+            }}
+          >
+            {[...skills, ...skills].map((skill, index) => (
+              <SkillTag key={`${skill.name}-2-${index}`} skill={skill} />
             ))}
           </motion.div>
         </div>
@@ -97,5 +109,12 @@ const Skills = () => {
     </section>
   );
 };
+
+const SkillTag = ({ skill }: { skill: SkillItem }) => (
+  <div className="shrink-0 flex items-center gap-2.5 sm:gap-3 rounded-2xl border border-slate-200/60 dark:border-white/5 bg-white/50 dark:bg-zinc-900/50 px-5 py-3 sm:px-8 sm:py-4 text-xs sm:text-sm font-bold text-slate-700 dark:text-zinc-300 backdrop-blur-md transition-all hover:border-primary/40 hover:text-primary hover:scale-105 shadow-sm group">
+    <skill.icon className={`text-xl sm:text-2xl transition-all duration-300 ${skill.color} group-hover:scale-110`} />
+    <span className="tracking-tight">{skill.name}</span>
+  </div>
+);
 
 export default Skills;

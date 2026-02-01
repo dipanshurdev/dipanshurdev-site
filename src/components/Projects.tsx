@@ -83,15 +83,19 @@ const Projects = () => {
             </h3>
           </motion.div>
 
-          <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
-            {otherProjects.map((project, index) => (
-              <ProjectCard
-                key={project.name}
-                project={project}
-                index={index + featuredProjects.length}
-                featured={false}
-              />
-            ))}
+          {/* Horizontal scroll on mobile, grid on desktop */}
+          <div className="relative group/scroll">
+            <div className="flex sm:grid gap-6 sm:gap-8 flex-nowrap sm:grid-cols-2 lg:grid-cols-3 overflow-x-auto sm:overflow-x-visible pb-8 sm:pb-0 hide-scrollbar snap-x snap-mandatory sm:snap-none -mx-4 px-4 sm:mx-0 sm:px-0">
+              {otherProjects.map((project, index) => (
+                <div key={project.name} className="min-w-[85vw] sm:min-w-0 snap-center">
+                  <ProjectCard
+                    project={project}
+                    index={index + featuredProjects.length}
+                    featured={false}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       )}
@@ -119,176 +123,94 @@ const ProjectCard = ({ project, index, featured }: ProjectCardProps) => {
         delay: Math.min(index * 0.1, 0.4),
         ease: [0.22, 1, 0.36, 1],
       }}
-      whileHover={{ y: -8 }}
-      className={`group relative overflow-hidden rounded-3xl bg-white dark:bg-zinc-900/80 border border-slate-200/50 dark:border-white/10 transition-all duration-500 ${
-        featured
-          ? "shadow-xl hover:shadow-2xl hover:shadow-primary/20 dark:shadow-none"
-          : "shadow-lg hover:shadow-xl hover:shadow-primary/10 dark:shadow-none"
-      } hover:border-primary/30 dark:hover:border-primary/20`}
+      className={`group relative flex flex-col h-full rounded-[2rem] bg-white dark:bg-zinc-900/40 border border-slate-200/60 dark:border-white/5 transition-all duration-500 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] hover:border-primary/20 overflow-hidden`}
     >
-      {/* Featured Badge */}
-      {featured && (
-        <div className="absolute top-4 right-4 z-20">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 backdrop-blur-sm border border-primary/30 text-xs font-semibold text-primary dark:text-primary">
-            <HiSparkles className="w-3 h-3" />
-            Featured
-          </span>
-        </div>
-      )}
-
-      {/* Image Container with Gradient Overlay */}
-      <div className="relative aspect-video w-full overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 dark:from-zinc-800 dark:to-zinc-900">
+      {/* Image Section */}
+      <div className="relative aspect-[16/10] overflow-hidden">
         {project.image ? (
-          <>
-            <img
-              src={project.image}
-              alt={project.name}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              loading="lazy"
-            />
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-          </>
+          <img
+            src={project.image}
+            alt={project.name}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            loading="lazy"
+          />
         ) : (
-          <div className="w-full h-full bg-gradient-to-br from-primary/20 via-secondary/20 to-primary/10 flex items-center justify-center">
-            <span className="text-slate-400 dark:text-slate-500 font-bold text-4xl sm:text-5xl">
-              {index + 1}
-            </span>
+          <div className="w-full h-full bg-gradient-to-br from-slate-100 to-slate-200 dark:from-zinc-800 dark:to-zinc-900 flex items-center justify-center">
+             <span className="text-slate-300 dark:text-zinc-700 font-black text-6xl italic opacity-50">0{index + 1}</span>
           </div>
         )}
+        
+        {/* Featured Badge */}
+        {featured && (
+            <div className="absolute top-4 left-4 z-20">
+              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md text-[10px] font-bold text-primary uppercase tracking-wider shadow-sm border border-primary/10">
+                <HiSparkles className="w-3 h-3" />
+                Featured
+              </span>
+            </div>
+        )}
 
-        {/* Action Buttons Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-          {hasGithub && (
-            <motion.a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="p-3 sm:p-4 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md rounded-2xl text-slate-900 dark:text-white hover:bg-primary hover:text-white transition-all shadow-xl min-w-[56px] min-h-[56px] flex items-center justify-center"
-              title="View on GitHub"
-              aria-label={`${project.name} on GitHub`}
-            >
-              <FiGithub className="w-5 h-5 sm:w-6 sm:h-6" />
-            </motion.a>
-          )}
-          {hasUrl && (
-            <motion.a
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="p-3 sm:p-4 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md rounded-2xl text-slate-900 dark:text-white hover:bg-primary hover:text-white transition-all shadow-xl min-w-[56px] min-h-[56px] flex items-center justify-center"
-              title="Open project"
-              aria-label={`Open ${project.name}`}
-            >
-              <FiExternalLink className="w-5 h-5 sm:w-6 sm:h-6" />
-            </motion.a>
-          )}
+        {/* Hover Overlay with Actions */}
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center gap-4">
+            {hasGithub && (
+                <a 
+                    href={project.githubUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="p-3 bg-white text-black rounded-full hover:scale-110 transition-transform shadow-xl"
+                    title="View GitHub"
+                >
+                    <FiGithub className="w-5 h-5" />
+                </a>
+            )}
+            {hasUrl && (
+                <a 
+                    href={project.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="p-3 bg-primary text-white rounded-full hover:scale-110 transition-transform shadow-xl"
+                    title="Live Demo"
+                >
+                    <FiExternalLink className="w-5 h-5" />
+                </a>
+            )}
         </div>
-
-        {/* Type Badge */}
-        {project.type && project.type !== "project" && (
-          <div className="absolute top-4 left-4 z-20">
-            <span className="inline-flex items-center px-2.5 py-1 rounded-lg bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm text-xs font-medium text-slate-700 dark:text-slate-300 border border-slate-200/50 dark:border-white/10">
-              {project.type === "contributor" ? "Contributed" : "Collaborator"}
-            </span>
-          </div>
-        )}
       </div>
 
-      {/* Content */}
-      <div className="p-5 sm:p-6 lg:p-7">
-        {/* Tech Stack */}
+      {/* Content Section */}
+      <div className="p-6 sm:p-8 flex flex-col flex-1">
         <div className="flex flex-wrap gap-2 mb-4">
-          {project.tech.slice(0, 4).map((tag) => (
+          {project.tech.slice(0, 3).map((tag) => (
             <span
               key={tag}
-              className="inline-flex items-center rounded-lg bg-gradient-to-r from-slate-100 to-slate-50 dark:from-white/5 dark:to-white/10 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-zinc-300 border border-slate-200/50 dark:border-white/10 transition-colors group-hover:border-primary/30 dark:group-hover:border-primary/20"
+              className="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider rounded-md bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-zinc-400 border border-slate-200/50 dark:border-white/5"
             >
               {tag}
             </span>
           ))}
-          {project.tech.length > 4 && (
-            <span className="inline-flex items-center rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-500 dark:text-zinc-500">
-              +{project.tech.length - 4}
-            </span>
+          {project.tech.length > 3 && (
+            <span className="px-2 py-1 text-[10px] font-bold text-slate-400">+{project.tech.length - 3}</span>
           )}
         </div>
 
-        {/* Title */}
-        <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors mb-3 leading-tight">
-          {project.name}
+        <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors duration-300">
+           {project.name}
         </h3>
 
-        {/* Description */}
-        <p className="text-slate-600 dark:text-zinc-400 text-sm sm:text-base leading-relaxed line-clamp-3 mb-4">
+        <p className="text-sm sm:text-base text-slate-600 dark:text-zinc-400 leading-relaxed line-clamp-2 mb-6">
           {typeof project.desc === "string"
             ? project.desc.replace(/<[^>]+>/g, "").trim()
             : ""}
         </p>
 
-        {/* Action Links - Desktop */}
-        <div className="hidden sm:flex items-center gap-3 pt-2 border-t border-slate-200/50 dark:border-white/10">
-          {hasGithub && (
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors group/link"
-              aria-label={`${project.name} on GitHub`}
-            >
-              <FiGithub className="w-4 h-4 transition-transform group-hover/link:translate-x-0.5" />
-              Code
-            </a>
-          )}
-          {hasUrl && (
-            <a
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors group/link"
-              aria-label={`Open ${project.name}`}
-            >
-              <FiExternalLink className="w-4 h-4 transition-transform group-hover/link:translate-x-0.5" />
-              Live Demo
-            </a>
-          )}
-        </div>
-
-        {/* Action Links - Mobile */}
-        <div className="flex items-center gap-4 sm:hidden pt-4 border-t border-slate-200/50 dark:border-white/10">
-          {hasGithub && (
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-white/5 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white transition-all min-h-[44px]"
-              aria-label={`${project.name} on GitHub`}
-            >
-              <FiGithub className="w-4 h-4" />
-              Code
-            </a>
-          )}
-          {hasUrl && (
-            <a
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-primary text-sm font-medium text-white hover:bg-primary/90 transition-all min-h-[44px] shadow-lg shadow-primary/25"
-              aria-label={`Open ${project.name}`}
-            >
-              <FiExternalLink className="w-4 h-4" />
-              Demo
-            </a>
-          )}
+        <div className="mt-auto flex items-center justify-between pt-4 border-t border-slate-100 dark:border-white/5">
+            <div className="flex items-center gap-4">
+                {hasGithub && <a href={project.githubUrl} target="_blank" className="text-sm font-bold text-slate-400 hover:text-primary transition-colors uppercase tracking-widest text-[10px]">Github</a>}
+                {hasUrl && <a href={project.url} target="_blank" className="text-sm font-bold text-slate-400 hover:text-primary transition-colors uppercase tracking-widest text-[10px]">Live</a>}
+            </div>
+            <span className="text-[10px] font-black text-slate-300 dark:text-zinc-700 uppercase italic">/ {project.type || "project"}</span>
         </div>
       </div>
-
-      {/* Decorative Gradient Border on Hover */}
-      <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-primary/0 via-primary/0 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none -z-10 blur-xl" />
     </motion.article>
   );
 };
